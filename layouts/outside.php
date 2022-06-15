@@ -16,11 +16,6 @@
     <!-- App CSS -->  
     <link id="theme-style" rel="stylesheet" href="../assets/css/mkulima.css">
 
-    <style>
-        body{
-            
-        }
-    </style>
 
 </head> 
 
