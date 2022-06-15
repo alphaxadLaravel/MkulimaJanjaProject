@@ -36,7 +36,9 @@
 						</div>
 
 						<div class="text-center">
-							<button type="submit" class="btn app-btn-primary w-100 theme-btn mx-auto">Jisajili</button>
+							<a href="../dashboard/home.php" class="btn app-btn-primary w-100 theme-btn mx-auto">Jisajili</a>
+
+							<!-- <button type="submit" class="btn app-btn-primary w-100 theme-btn mx-auto">Jisajili</button> -->
 						</div>
 					</form>
 					<!--//auth-form-->

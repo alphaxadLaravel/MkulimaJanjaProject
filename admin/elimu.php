@@ -41,6 +41,7 @@
                                     <tr>
                                         <th class="cell">Nakala</th>
                                         <th class="cell">Mada</th>
+                                        <th class="cell">Ujumbe</th>
                                         <th class="cell">Lengo</th>
                                         <th class="cell">Tarehe</th>
                                         <th class="cell">Futa</th>
@@ -51,6 +52,7 @@
                                         <tr>
                                             <td class="cell"><img src="../assets/images/blog-3.jpg" class="img-fluid rounded" height="45px" width="45px" alt=""></td>
                                             <td class="cell"><span class="truncate">Kilimo cha Karoti Dar, wakati wa kiangazi</span></td>
+                                            <td class="cell"><span class="truncate">Ulimaji wa karoti wakati wa kiangazi kwa mkoa wa dar-es-salam unalipa sana unawez pata hata million kwa siku mbili tu jaribu leo</span></td>
                                             <td class="cell"><span class="truncate text-danger">Mazao</span></td>
                                             <td class="cell"><span class="truncate ">20-05-2022</span></td>
                                             </td>

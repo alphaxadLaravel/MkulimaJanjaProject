@@ -20,7 +20,8 @@
 						</div>
 
 						<div class="text-center">
-							<button type="submit" class="btn app-btn-primary w-100 theme-btn mx-auto">Ingia</button>
+							<!-- <button type="submit" class="btn app-btn-primary w-100 theme-btn mx-auto">Ingia</button> -->
+							<a href="../dashboard/home.php" class="btn app-btn-primary w-100 theme-btn mx-auto">Ingia</a>
 						</div>
 					</form>
 					<!--//auth-form-->

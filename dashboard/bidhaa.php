@@ -26,18 +26,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="row g-4">
+                <div class="row g-1">
                     <div class="app-card mb-3">
                         <div class="row g-0">
                             <div class="col-md-4">
                                 <img src="../assets/images/mbolea-1.jpg" alt="Trendy Pants and Shoes" class="img-fluid rounded-start h-100 w-100" />
                             </div>
-                            <div class="col-md-8 px-4">
+                            <div class="col-md-8 px-2">
                                 <div class="d-flex justify-content-between py-3 align-items-center">
                                 <span class=" fw-bold">MboleaGrade A+</span>
                                     <div class="">
                                         <img src="../assets/images/mbuto.jpg" width="30px" height="30px" alt="" class="rounded-circle">
-                                        <span class="text-muted fw-bold d-none d-md-block">AlphaJozee</span>
                                     </div>
                                 </div>
                                 <span class="text-muted fw-bold">Bei: <span class="text-danger">10, 000/= </span>KG</span>
