@@ -54,10 +54,10 @@
                                 <div class="row mt-2 d-flex align-items-center justify-content-center">
                                     <div class="col-md-8 my-3">
                                         <div class="row d-flex align-items-center">
-                                            <div class="col-6">
+                                            <div class="col-5">
                                                 <input type="text" name="qty" id="sst" maxlength="10" value="1" title="Quantity:" class="form-control">
                                             </div>
-                                            <div class="col-6 d-flex">
+                                            <div class="col-7 d-flex">
                                                 <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;" class="btn mx-1 btn-sm app-btn-secondary increase items-count" type="button"><i class="mdi mdi-plus"></i>KG</button>
                                                 <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) && sst > 0 ) result.value--;return false;" class="btn btn-sm app-btn-secondary reduced items-count" type="button"><i class="mdi mdi-minus"></i>KG</button>
                                             </div>
