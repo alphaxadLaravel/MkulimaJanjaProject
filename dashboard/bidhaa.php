@@ -26,25 +26,24 @@
                         </div>
                     </div>
                 </div>
-                <div class="row g-1">
-                    <div class="app-card mb-3">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="../assets/images/mbolea-1.jpg" alt="Trendy Pants and Shoes" class="img-fluid rounded-start h-100 w-100" />
-                            </div>
-                            <div class="col-md-8 px-2">
-                                <div class="d-flex justify-content-between py-3 align-items-center">
-                                <span class=" fw-bold">MboleaGrade A+</span>
-                                    <div class="">
-                                        <img src="../assets/images/mbuto.jpg" width="30px" height="30px" alt="" class="rounded-circle">
-                                    </div>
+            <div class="row g-1">
+                <div class="card  border-0 shadow-sm  my-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="../assets/images/product-1.jpg" alt="Trendy Pants and Shoes" class="img-fluid rounded-start h-100 w-100" />
+                        </div>
+                        <div class="col-md-8 px-4">
+                            <div class="d-flex justify-content-between py-3 align-items-center">
+                                <span class=" fw-bold">Bidhaa: <span class="text-danger">Nyanya Nyekundu</span> </span>
+                                <div class="">
+                                    <img src="../assets/images/mbuto.jpg" width="30px" height="30px" alt="" class="rounded-circle">
                                 </div>
-                                <span class="text-muted fw-bold">Bei: <span class="text-danger">10, 000/= </span>KG</span>
-                                <p>
-                                    Hii mbolea ni safi na ina virutubisho vingi, Nunua kwa manufaa ya shmba lako ili uongeze 
-                                    kiwango cha mazao shmbani kwako
-                                </p>
-                                <span class="text-muted fw-bold">Idadi iliyopo: <span class="text-danger"> 500</span>KG</span>
+                            </div>
+                            <p>
+                                Hiziz nyanya ni za kwangu zinapatikana ilala boma sokoni ukija bei itapungua kidogo
+                            </p>
+                            <span class="text-muted fw-bold">Price: <span class="text-danger">1,0000,0000/= </span>For Rent</span> <br>
+                            <span class="text-muted fw-bold">Idadi iliyopo: <span class="text-danger"> 500</span>KG</span>
 
 
                                 
@@ -64,10 +63,10 @@
                                         <a class="app-btn-secondary btn w-100" href="cart.php">Ongeza Kapuni</a>
                                     </div>
                                 </div>
-                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
             </div>
         </div>
