@@ -107,9 +107,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="app-card-footer p-4 mt-auto">
-                            <a class="btn btn-danger text-white" href="#">Futa Account Yako</a>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
@@ -164,7 +162,9 @@
                             </div>
                             <!--//item-->
                         </div>
-
+                        <div class="app-card-footer p-4 mt-auto">
+                            <a class="btn btn-danger text-white" href="#">Futa Account Yako</a>
+                        </div>
                     </div>
                     <!--//app-card-->
                 </div>
