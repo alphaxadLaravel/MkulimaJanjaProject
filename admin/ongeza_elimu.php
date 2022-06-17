@@ -17,56 +17,56 @@
                 </div>
             </div>
 
-            <div class="row g-4">
-            <div class="app-card app-card-settings shadow-sm p-4">
-                
-                <div class="app-card-body">
-                    <form class="settings-form">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="mb-3">
-                                    <label for="setting-input-1" class="form-label">Kicwa cha Mada <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="setting-input-1" value="" placeholder="Weka mada hapa.." required="">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="mb-3">
-                                    <label for="setting-input-1" class="form-label">Eneo Lengwa <span class="text-danger">*</span></label>
-                                    <select class="form-select" name="" id="">
-                                        <option>Chagua lengo...</option>
-                                        <option value="Mwanza">Mazao</option>
-                                        <option value="">Mbolea</option>
-                                        <option value="">Madawa</option>
-                                        <option>Vyote</option>
-                                      </select>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="mb-3">
-                                    <label for="setting-input-1" class="form-label">Picha <span class="text-danger">*</span></label>
-                                    <input type="file" class="form-control file-selector-button" id="setting-input-1" value="" placeholder="Enter Property ID" required="">
-                                </div>
+            <div class="row px-2">
+                <div class="app-card app-card-settings shadow-sm p-4">
 
-                            </div>
-                        </div>
+                    <div class="app-card-body">
+                        <form class="settings-form">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <label for="setting-input-1" class="form-label">Kicwa cha Mada <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="setting-input-1" value="" placeholder="Weka mada hapa.." required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <label for="setting-input-1" class="form-label">Eneo Lengwa <span class="text-danger">*</span></label>
+                                        <select class="form-select" name="" id="">
+                                            <option>Chagua lengo...</option>
+                                            <option value="Mwanza">Mazao</option>
+                                            <option value="">Mbolea</option>
+                                            <option value="">Madawa</option>
+                                            <option>Vyote</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <label for="setting-input-1" class="form-label">Picha <span class="text-danger">*</span></label>
+                                        <input type="file" class="form-control file-selector-button" id="setting-input-1" value="" placeholder="Enter Property ID" required="">
+                                    </div>
 
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="mb-3">
-                                    <label for="setting-input-1" class="form-label">Ujumbe Mrefu <span class="text-danger">*</span> </label>
-                                    <textarea class="form-control" name="" rows="5" cols="3" id="" placeholder="elimisha hapa..."></textarea>
                                 </div>
                             </div>
-                        </div>
-                       <div class="d-flex justify-content-end">
-                        
-                        <button type="submit" class="btn app-btn-primary">Chapisha</button>
-                       </div>
-                    </form>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <label for="setting-input-1" class="form-label">Ujumbe Mrefu <span class="text-danger">*</span> </label>
+                                        <textarea class="form-control" name="" rows="5" cols="3" id="" placeholder="elimisha hapa..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end">
+
+                                <button type="submit" class="btn app-btn-primary">Chapisha</button>
+                            </div>
+                        </form>
+                    </div>
+
                 </div>
-
             </div>
-        </div>
         </div>
 
         <?php include "../components/inner_footer.php" ?>
