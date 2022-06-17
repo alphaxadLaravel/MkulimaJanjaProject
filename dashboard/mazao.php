@@ -51,45 +51,45 @@
                 </div>
             </div>
             <div class="row ">
-                    <?php for ($i = 0; $i < 8; $i++) { ?>
-                        <div class="col-md-3 my-3 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="card border-0 shadow-sm">
-                                <div class="position-relative bg-light overflow-hidden">
-                                    <a href="bidhaa.php"><img class="img-fluid w-100" src="../assets/images/product-1.jpg" height="2500px" alt=""></a>
-                                    <!-- <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div> -->
-                                </div>
-                                <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="bidhaa.php">Nyanya za Mchuzi</a>
-                                    <span class=" me-1"><span class="text-dark">Bei:</span> <span class="text-primary">Tsh 1,000/=</span></span>
-                                    <!-- <span class="text-body text-decoration-line-through">Tsh 2,000/=</span> -->
-                                </div>
-                                <div class="d-flex border-top">
-                                    <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href="bidhaa.php"><i class="fa fa-eye text-primary me-2"></i>Taarifa zaidi</a>
-                                    </small>
-                                    <small class="w-50 text-center py-2">
-                                        <a class="text-body" href="cart.php"><i class="fa fa-shopping-bag text-primary me-2"></i>Weka Kapuni</a>
-                                    </small>
-                                </div>
+                <?php for ($i = 0; $i < 8; $i++) { ?>
+                    <div class="col-md-3 my-3 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="card border-0 shadow-sm">
+                            <div class="position-relative bg-light overflow-hidden">
+                                <a href="bidhaa.php"><img class="img-fluid w-100" src="../assets/images/nyanya.webp" height="2500px" alt=""></a>
+                                <!-- <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div> -->
+                            </div>
+                            <div class="text-center p-4">
+                                <a class="d-block h5 mb-2" href="bidhaa.php">Nyanya za Mchuzi</a>
+                                <span class=" me-1"><span class="text-dark">Bei:</span> <span class="text-primary">Tsh 1,000/=</span></span>
+                                <!-- <span class="text-body text-decoration-line-through">Tsh 2,000/=</span> -->
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="w-50 text-center border-end py-2">
+                                    <a class="text-body" href="bidhaa.php"><i class="fa fa-eye text-primary me-2"></i>Taarifa zaidi</a>
+                                </small>
+                                <small class="w-50 text-center py-2">
+                                    <a class="text-body" href="cart.php"><i class="fa fa-shopping-bag text-primary me-2"></i>Weka Kapuni</a>
+                                </small>
                             </div>
                         </div>
-                    <?php } ?>
-                    <div class="d-flex justify-content-center">
-                        <nav class="app-pagination my-3">
-                            <ul class="pagination justify-content-center">
-                                <li class="page-item disabled">
-                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i class="mdi mdi-chevron-double-left"></i></a>
-                                </li>
-                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#"><i class="mdi mdi-chevron-double-right"></i></a>
-                                </li>
-                            </ul>
-                        </nav>
                     </div>
+                <?php } ?>
+                <div class="d-flex justify-content-center">
+                    <nav class="app-pagination my-3">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i class="mdi mdi-chevron-double-left"></i></a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#"><i class="mdi mdi-chevron-double-right"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
+            </div>
         </div>
 
         <?php include "../components/inner_footer.php" ?>
