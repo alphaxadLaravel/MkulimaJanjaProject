@@ -145,7 +145,7 @@
 				</div>
 
 				
-				<h4 class="app-page-title"><i class="mdi mdi-corn"></i> Baadhi ya <span class="text-danger">Madawa</span>!</h4>
+				<h4 class="app-page-title"><i class="mdi mdi-flask"></i> Baadhi ya <span class="text-danger">Madawa</span>!</h4>
 				
 				<div class="row g-4">
 				<?php for($i=0; $i < 4; $i++) { ?>
