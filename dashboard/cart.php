@@ -55,12 +55,9 @@
                                                 </td>
                                             </tr>
                                         <?php } ?>
-
                                     </tbody>
                                 </table>
                             </div>
-                            <!--//table-responsive-->
-
                         </div>
                     </div>
                 </div>
