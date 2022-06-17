@@ -28,8 +28,6 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
             <!-- steps ziko hapa -->
             <div class="row mb-4 align-items-center justify-content-between">

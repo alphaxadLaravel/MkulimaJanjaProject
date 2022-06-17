@@ -52,11 +52,10 @@
                 </div>
             </div>
 
-            <div class="container mt-3">
-                <div class="row g-4 mb-4">
+            <div class="row mb-4">
                     <div class="col-md-8">
-                        <span class="text-muted fw-bold my-2">🏘 Bidhaa</span>
-                        <div class="card shaow-sm border-0 app-card-orders-table shadow-sm mb-3">
+                        <h6 class="text-muted fw-bold mb-3">🏘 Bidhaa</h6>
+                        <div class="card border-0 app-card-orders-table shadow-sm mb-3">
                             <div class="app-card-body">
                                 <div class="table-responsive">
                                     <table class="table app-table-hover mb-0 text-left">
@@ -64,7 +63,7 @@
                                             <tr>
                                                 <th class="cell">Bidhaa</th>
                                                 <th class="cell"></th>
-                                                <th class="cell">Zinapatikana</th>
+                                                <th class="cell">Muuzaji</th>
                                                 <th class="cell">Price</th>
                                             </tr>
                                         </thead>
@@ -73,7 +72,7 @@
                                                 <tr>
                                                     <td class="cell"><img src="../assets/images/product-1.jpg" class="img-fluid rounded" height="45px" width="45px" alt=""></td>
                                                     <td class="cell"><span class="truncate">Nyanya Nyekundu</span></td>
-                                                    <td class="cell"><span class="truncate">Manzese,Dar-es-Salaam</span>
+                                                    <td class="cell"><span class="truncate">Philmon Mbuto</span>
                                                     </td>
                                                     <td class="cell"><span class="truncate">Tsh 150,000</span></td>
                                                 </tr>
@@ -87,7 +86,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <span class="text-muted fw-bold my-2">😎 Watumiaji</span>
+                        <h6 class="text-muted fw-bold mb-3">😎 Watumiaji</h6>
                         <div class="app-card app-card-orders-table shadow-sm mb-5">
                             <div class="app-card-body">
                                 <div class="table-responsive">
@@ -116,7 +115,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
 
         <?php include "../components/inner_footer.php" ?>
