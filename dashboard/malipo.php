@@ -22,8 +22,8 @@
                     <div class="page-utilities">
                         <div class="row g-2 justify-content-start justify-content-md-end align-items-center">
                             <div class="col-auto">
-                                <a class="btn app-btn-primary" href="malipo.php"> <i class="mdi mdi-check-all"></i>
-                                    Fanya Malipo</a>
+                                <a class="btn app-btn-primary" href="cart.php"> <i class="mdi mdi-cart"></i>
+                                    Rudi Kapuni</a>
                             </div>
                         </div>
                     </div>
