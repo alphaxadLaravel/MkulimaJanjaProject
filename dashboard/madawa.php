@@ -59,7 +59,7 @@
                     <div class="col-md-3 my-3 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="card border-0 shadow-sm">
                             <div class="position-relative bg-light overflow-hidden">
-                                <a href="bidhaa.php"><img class="img-fluid w-100" src="../assets/images/pest-2.webp" style="height: 15rem;" alt=""></a>
+                                <a href="bidhaa.php"><img class="w-100 rounded-top" src="../assets/images/pest-2.webp" style="height: 30vh" alt=""></a>
                                 <!-- <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div> -->
                             </div>
                             <div class="text-center p-4">
