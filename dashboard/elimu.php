@@ -51,8 +51,6 @@
 
             </div>
 
-            
-
             <div class="row ">
                 <?php for ($i = 0; $i < 6; $i++) { ?>
                     <div class="col-md-4 wow my-3 fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">

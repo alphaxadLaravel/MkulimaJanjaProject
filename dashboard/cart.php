@@ -46,11 +46,11 @@
                                             <tr>
                                                 <td class="cell"><img src="../assets/images/product-1.jpg" class="img-fluid rounded" height="35px" width="35px" alt=""></td>
                                                 <td class="cell"><span class="truncate">Mbolea grade A+</span></td>
-                                                <td class="cell">Tsh 20, 000/=</td>
-                                                <td class="cell">30</td>
-                                                <td class="cell">Tsh 600, 000/=</td>
-                                                <td class="cell">
-                                                    <a class="btn-sm app-btn-secondary" href="#"><i class="mdi mdi-delete text-danger"></i></a>
+                                                <td class="cell"><span class="truncate">Tsh 20, 000/=</span></td>
+                                                <td class="cell"><span class="truncate">20</span></td>
+                                                <td class="cell"><span class="truncate">Tsh 400,000/=</span></td>
+                                                <td class="cell d-flex">
+                                                    <a class="btn-sm app-btn-secondary mx-2" href="#"><i class="mdi mdi-delete text-danger"></i></a>
                                                     <a class="btn-sm app-btn-secondary" href="bidhaa.php"><i class="mdi mdi-lead-pencil text-primary"></i></a>
                                                 </td>
                                             </tr>
