@@ -26,7 +26,7 @@
                             <div class="col-md-4">
                                 <div class="mb-3">
                                     <label for="setting-input-1" class="form-label">Kicwa cha Mada <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="setting-input-1" value="" placeholder="Enter Plate number" required="">
+                                    <input type="text" class="form-control" id="setting-input-1" value="" placeholder="Weka mada hapa.." required="">
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -54,7 +54,7 @@
                             <div class="col-md-12">
                                 <div class="mb-3">
                                     <label for="setting-input-1" class="form-label">Ujumbe Mrefu <span class="text-danger">*</span> </label>
-                                    <textarea class="form-control" name="" rows="5" id=""></textarea>
+                                    <textarea class="form-control" name="" rows="5" cols="3" id="" placeholder="elimisha hapa..."></textarea>
                                 </div>
                             </div>
                         </div>

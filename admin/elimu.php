@@ -32,7 +32,7 @@
                 </div>
             </div>
 
-            <div class="row g-4 mt-4">
+            <div class="row mt-4">
                 <div class="app-card app-card-orders-table shadow-sm mb-5">
                     <div class="app-card-body">
                         <div class="table-responsive">
