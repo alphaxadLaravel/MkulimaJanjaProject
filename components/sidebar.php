@@ -3,8 +3,8 @@
 	<div class="sidepanel-inner d-flex flex-column">
 		<a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none"></a>
 		<div class="app-branding">
-			<!-- <a class="app-logo" href="index.html"><img class="logo-icon me-2" src="assets/images/app-logo.svg"
-					alt="logo"> -->
+			<a class="app-logo" href="index.html"><img class="logo-icon me-2" src="../assets/images/back.png"
+					alt="logo">
 			<span class="logo-text text-success"><span class="text-danger">M</span>kulima<span class="text-danger">J</span>anja</span></a>
 
 		</div>
