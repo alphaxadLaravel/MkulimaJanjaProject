@@ -12,7 +12,7 @@
     <div class="app-content pt-3 p-md-3 p-lg-4">
         <div class="container-xl">
 
-            <div class="row g-3 mb-4 align-items-center justify-content-between">
+            <div class="row g-3 mb-2 align-items-center justify-content-between">
                 <div class="col-auto">
                     <h1 class="app-page-title mb-0"><i class="mdi mdi-book-open-page-variant text-danger"></i> Elimu Bure!</h1>
                 </div>
@@ -48,13 +48,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="row g-2 mt-4">
-                    <?php for ($i = 0; $i < 6; $i++) { ?>
-                        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+
+            </div>
+
+            
+
+            <div class="row ">
+                <?php for ($i = 0; $i < 6; $i++) { ?>
+                    <div class="col-md-4 wow my-3 fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                             <div class="card border-0 shadow-sm">
-                            <img class="img-fluid" src="../assets/images/elimu-1.jpg" alt="">
+                            <img class="img-fluid" src="../assets/images/cocoa.webp" alt="">
                             <div class="bg-light p-4">
-                                <a class="d-block h5 lh-base mb-4" href="">Kilimo cha mahindi wakati wa kihangazi</a>
+                                <a class="d-block h5 lh-base mb-4" href="">Jifunze Kilimo cha Cocoa</a>
                                 <div class="text-muted border-top pt-4">
                                     <small class="me-3"><i class="fa fa-user text-primary me-2"></i>MkulimaJanja</small>
                                     <small class="me-3"><i class="fa fa-calendar text-primary me-2"></i>01 Jan, 2022</small>
@@ -62,25 +67,22 @@
                             </div>
                             </div>
                         </div>
-                        
-                    <?php } ?>
-                    <div class="d-flex justify-content-center">
-                        <nav class="app-pagination my-3">
-                            <ul class="pagination justify-content-center">
-                                <li class="page-item disabled">
-                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i class="mdi mdi-chevron-double-left"></i></a>
-                                </li>
-                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#"><i class="mdi mdi-chevron-double-right"></i></a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+                <?php } ?>
+                <div class="d-flex justify-content-center">
+                    <nav class="app-pagination my-3">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i class="mdi mdi-chevron-double-left"></i></a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#"><i class="mdi mdi-chevron-double-right"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-
             </div>
         </div>
 
