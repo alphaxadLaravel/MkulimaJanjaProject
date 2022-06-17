@@ -11,15 +11,14 @@
 
     <div class="app-content pt-3 p-md-3 p-lg-4">
         <div class="container-xl">
-            <div class="row g-3 mb-4 align-items-center justify-content-between">
+            <div class="row g-3 mb-3 align-items-center justify-content-between">
                 <div class="col-auto">
                     <h1 class="app-page-title mb-0">👨‍👩‍👧‍👦 Watumiaji!</h1>
                 </div>
                 <div class="col-auto">
                     <div class="page-utilities">
-                        <div class="row g-2 justify-content-start justify-content-md-end align-items-center">
+                        <div class="row g-2 justify-content-end justify-content-md-end align-items-center">
                             <div class="col-auto">
-
                                 <select class="form-select w-auto">
                                     <option selected="" value="option-1">Watumiaji wote</option>
                                     <option value="option-2">wateja</option>
@@ -33,7 +32,7 @@
                 </div>
             </div>
 
-            <div class="row g-4 mt-4">
+            <div class="row  mt-4">
                 <div class="app-card app-card-orders-table shadow-sm mb-5">
                     <div class="app-card-body">
                         <div class="table-responsive">
