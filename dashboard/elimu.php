@@ -55,7 +55,7 @@
                 <?php for ($i = 0; $i < 6; $i++) { ?>
                     <div class="col-md-4 wow my-3 fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                             <div class="card border-0 shadow-sm">
-                            <img class="img-fluid" src="../assets/images/cocoa.webp" alt="">
+                            <a href="#"><img class="img-fluid" src="../assets/images/cocoa.webp" alt=""></a>
                             <div class="bg-light p-4">
                                 <a class="d-block h5 lh-base mb-4" href="">Jifunze Kilimo cha Cocoa</a>
                                 <div class="text-muted border-top pt-4">

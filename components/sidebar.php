@@ -125,7 +125,7 @@
 						<span class="nav-link-text">Elimu</span>
 					</a>
 				</li>
-				<li class="nav-item">
+				<li class="nav-item mb-3">
 					<a class="nav-link" href="../admin/ongeza_elimu.php">
 						<span class="nav-icon">
 							<i class="mdi mdi-book-open-page-variant"></i>
@@ -133,8 +133,34 @@
 						<span class="nav-link-text">Ongeza Elimu</span>
 					</a>
 				</li>
+				<li class="nav-item">
+					<hr class="mx-4">
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../muuzaji/ongeza_bidhaa.php">
+						<span class="nav-icon">
+							<i class="mdi mdi-lock-plus"></i>
+						</span>
+						<span class="nav-link-text">Ongeza Bidhaa</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../muuzaji/duka_langu.php">
+						<span class="nav-icon">
+							<i class="mdi mdi-store"></i>
+						</span>
+						<span class="nav-link-text">Duka Langu</span>
+					</a>
+				</li>
+				<li class="nav-item mb-5">
+					<a class="nav-link" href="../muuzaji/wanunuaji.php">
+						<span class="nav-icon">
+							<i class="mdi mdi-book-open-page-variant"></i>
+						</span>
+						<span class="nav-link-text">Wanunuaji</span>
+					</a>
+				</li>
 			</ul>
-			<!--//app-menu-->
 		</nav>
 	</div>
 
