@@ -35,7 +35,6 @@
                             <div class="item border-bottom py-3">
                                 <div class="row justify-content-between align-items-center">
                                     <div class="col-auto">
-                                        <div class="item-label mb-2"><strong>Photo</strong></div>
                                         <div class="item-data">
                                             <img class="profile-image rounded" src="../assets/images/mbuto.jpg" alt="">
                                         </div>
@@ -62,6 +61,16 @@
                                     </div>
                                     <div class="col text-end">
                                         <div class="item-data">+255-743-196-599</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item border-bottom py-3">
+                                <div class="row justify-content-between align-items-center">
+                                    <div class="col-auto">
+                                        <div class="item-label"><strong>Kitengo</strong></div>
+                                    </div>
+                                    <div class="col text-end">
+                                        <div class="item-data">Muuza Mbolea</div>
                                     </div>
                                 </div>
                             </div>
@@ -99,7 +108,7 @@
                             </div>
                         </div>
                         <div class="app-card-footer p-4 mt-auto">
-                            <a class="btn app-btn-secondary" href="#">Badili Wasifu Wote</a>
+                            <a class="btn btn-danger text-white" href="#">Futa Account Yako</a>
                         </div>
                     </div>
                 </div>
