@@ -57,8 +57,8 @@
                                             <div class="col-6">
                                                 <input type="text" name="qty" id="sst" maxlength="10" value="1" title="Quantity:" class="form-control">
                                             </div>
-                                            <div class="col-6">
-                                                <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;" class="btn btn-sm app-btn-secondary increase items-count" type="button"><i class="mdi mdi-plus"></i>KG</button>
+                                            <div class="col-6 d-flex">
+                                                <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;" class="btn mx-1 btn-sm app-btn-secondary increase items-count" type="button"><i class="mdi mdi-plus"></i>KG</button>
                                                 <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) && sst > 0 ) result.value--;return false;" class="btn btn-sm app-btn-secondary reduced items-count" type="button"><i class="mdi mdi-minus"></i>KG</button>
                                             </div>
                                         </div>
