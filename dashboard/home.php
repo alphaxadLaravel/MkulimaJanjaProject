@@ -89,7 +89,7 @@
 						<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
 						<div class="card border-0 shadow-sm">
 							<div class="position-relative bg-light overflow-hidden">
-								<a href="bidhaa.php"><img class="img-fluid w-100" src="../assets/images/product-1.jpg" height="2500px" alt=""></a>
+								<a href="bidhaa.php"><img class="img-fluid w-100" src="../assets/images/nyanya.webp" height="2500px" alt=""></a>
 								<!-- <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div> -->
 							</div>
 							<div class="text-center p-4">
@@ -120,7 +120,7 @@
 						<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
 						<div class="card border-0 shadow-sm">
 							<div class="position-relative bg-light overflow-hidden">
-								<a href="bidhaa.php"><img class="img-fluid w-100" src="../assets/images/mbolea-1.jpg" height="2500px" alt=""></a>
+								<a href="bidhaa.php"><img class="img-fluid w-100" src="../assets/images/mbolea-2.jpg" height="2500px" alt=""></a>
 								<!-- <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div> -->
 							</div>
 							<div class="text-center p-4">
@@ -152,7 +152,7 @@
 						<div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
 						<div class="card border-0 shadow-sm">
 							<div class="position-relative bg-light overflow-hidden">
-								<a href="bidhaa.php"><img class="img-fluid w-100" src="../assets/images/pestcide-1.jpg" height="2500px" alt=""></a>
+								<a href="bidhaa.php"><img class="img-fluid w-100" src="../assets/images/pest-2.webp" height="2500px" alt=""></a>
 								<!-- <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div> -->
 							</div>
 							<div class="text-center p-4">
