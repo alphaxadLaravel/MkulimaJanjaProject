@@ -9,7 +9,7 @@
 		<div class="app-content pt-3 p-md-3 p-lg-4">
 			<div class="container-xl">
 
-				<h1 class="app-page-title">Karibu, <span class="text-success">Alphaxad!</span></h1>
+				<h1 class="app-page-title">Karibu, <span class="text-success"><?php echo ucfirst($_SESSION['username']); ?>!</span></h1>
 
 				<div class="row g-4 mb-4">
 					<div class="col-12 col-lg-4">

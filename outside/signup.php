@@ -7,38 +7,38 @@
 				<h2 class="auth-heading text-center mb-4 text-success">Usajili - Member</h2>
 
 				<div class="auth-form-container text-start mx-auto">
-					<form class="auth-form auth-signup-form">
+					<form action="../logics/auth.php" method="POST" class="auth-form auth-signup-form">
 						<div class="email mb-2">
 							<small class="text-muted">Jina Kamili</small>
-							<input name="signup-name" type="text" class="form-control signup-name" required="required">
+							<input name="jina" type="text" class="form-control signup-name" required="required">
 						</div>
 						<div class="email mb-2">
 							<small class="text-muted">Username</small>
-							<input name="signup-email" type="text" class="form-control signup-email" required="required">
+							<input name="username" type="text" class="form-control signup-email" required="required">
 						</div>
 						<div class="row">
 							<div class="col-md-6">
 								<div class="password mb-2">
 									<small class="text-muted">Tengeneza Password</small>
-									<input id="signup-password" name="signup-password" type="password" class="form-control signup-password" required="required">
+									<input id="signup-password" name="pwd1" type="password" class="form-control signup-password" required="required">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="password mb-2">
 									<small class="text-muted">Thibitisha Password</small>
-									<input id="signup-password" name="signup-password" type="password" class="form-control signup-password" required="required">
+									<input id="signup-password" name="pwd2" type="password" class="form-control signup-password" required="required">
 								</div>
 							</div>
 							<div class="email mb-2">
 								<small class="text-muted">Namba ya Simu</small>
-								<input name="signup-name" type="text" class="form-control signup-name" required="required">
+								<input name="simu" type="text" class="form-control signup-name" required="required">
 							</div>
 						</div>
 
 						<div class="text-center">
-							<a href="../dashboard/home.php" class="btn app-btn-primary w-100 theme-btn mx-auto">Jisajili</a>
+							<!-- <a href="../dashboard/home.php" class="btn app-btn-primary w-100 theme-btn mx-auto">Jisajili</a> -->
 
-							<!-- <button type="submit" class="btn app-btn-primary w-100 theme-btn mx-auto">Jisajili</button> -->
+							<button type="submit" name="member" class="btn app-btn-primary w-100 theme-btn mx-auto">Jisajili</button>
 						</div>
 					</form>
 					<!--//auth-form-->

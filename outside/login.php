@@ -7,21 +7,21 @@
 				<h2 class="auth-heading text-center mb-4 text-success">Ingia - MkulimaJanja</h2>
 
 				<div class="auth-form-container text-start mx-auto">
-					<form class="auth-form auth-signup-form">
+					<form action="../logics/auth.php" method="POST" class="auth-form auth-signup-form">
 
 						<div class="email mb-2">
 							<small class="text-muted">Username</small>
-							<input name="signup-email" type="text" class="form-control signup-email" required="required">
+							<input name="username" type="text" class="form-control signup-email" required="required">
 						</div>
 
 						<div class="password mb-2">
 							<small class="text-muted">Neno Siri</small>
-							<input id="signup-password" name="signup-password" type="password" class="form-control signup-password" required="required">
+							<input id="signup-password" name="password" type="password" class="form-control signup-password" required="required">
 						</div>
 
 						<div class="text-center">
-							<!-- <button type="submit" class="btn app-btn-primary w-100 theme-btn mx-auto">Ingia</button> -->
-							<a href="../dashboard/home.php" class="btn app-btn-primary w-100 theme-btn mx-auto">Ingia</a>
+							<button type="submit" name="login" class="btn app-btn-primary w-100 theme-btn mx-auto">Ingia</button>
+							<!-- <a href="../dashboard/home.php" class="btn app-btn-primary w-100 theme-btn mx-auto">Ingia</a> -->
 						</div>
 					</form>
 					<!--//auth-form-->

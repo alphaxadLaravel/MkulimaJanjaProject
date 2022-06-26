@@ -1,3 +1,7 @@
+<?php 
+	session_start();
+	include "../logics/connection.php";
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
