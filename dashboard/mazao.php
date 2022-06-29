@@ -32,7 +32,6 @@
                             </div>
                             <!--//col-->
                             <div class="col-auto">
-
                                 <select class="form-select w-auto">
                                     <option selected="" value="option-1">Mazao Yote</option>
                                     <option value="option-2">Mazao Mapya</option>

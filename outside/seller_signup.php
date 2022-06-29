@@ -51,10 +51,10 @@
 									<small class="text-muted">Unauza Nini?</small>
 									  <select class="form-control" name="role" required="required">
 										<option value=" "> </option>
-										<option value="muuza_mazo">Mazao</option>
-										<option value="muuza_mbolea">Mbolea</option>
-										<option value="muuza_madawa">Madawa</option>
-										<option value="muuza_mbolea">Mbolea</option>
+										<option value="mazao">Mazao</option>
+										<option value="mbolea">Mbolea</option>
+										<option value="madawa">Madawa</option>
+										<option value="mbolea">Mbolea</option>
 									</select>
 
 								</div>

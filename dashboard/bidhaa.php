@@ -27,49 +27,65 @@
                     </div>
                 </div>
                 <div class="row g-1">
-                    <div class="card  border-0 shadow-sm  my-3">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="../assets/images/nyanya.webp" alt="Trendy Pants and Shoes" class="img-fluid rounded-start h-100 w-100" />
-                            </div>
-                            <div class="col-md-8 px-4">
-                                <div class="d-flex justify-content-between py-3 align-items-center">
-                                    <span class=" fw-bold">Bidhaa: <span class="text-danger">Nyanya Nyekundu</span> </span>
-                                    <div class="">
-                                        <img src="../assets/images/mbuto.jpg" width="30px" height="30px" alt="" class="rounded-circle">
-                                    </div>
+                    <?php
+                    $bidhaa = $_GET['id'];
+                    $_SESSION['bidhaa'] = $bidhaa;
+
+                    $sql = "SELECT * FROM bidhaa JOIN users ON bidhaa.user_id = users.id WHERE bidhaa.id ='$bidhaa'";
+                    $check = mysqli_query($conn, $sql);
+
+                    while ($row = mysqli_fetch_assoc($check)) {
+
+                    ?>
+                        <div class="card  border-0 shadow-sm  my-3">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="<?php echo $row['picha'] ?>" alt="Trendy Pants and Shoes" class="img-fluid rounded-start h-100 w-100" />
                                 </div>
-                                <p>
-                                    Hizi Nyanya ni nzuri kwaajili ya mchuzi na kachumbari, unaweza nunua fungu tano nitakupa offer ya fungu mbili, nunu leo kabla hazijaisha
-                                </p>
-                                <!-- <span class="text-muted fw-bold">Bei: <span class="text-danger">1,0000,0000/= </span>Kwa KG</span> <br>
-                            <span class="text-muted fw-bold">Idadi Iliyopo: <span class="text-danger"> 123 </span>KG</span> <br>
-                            <span class="text-muted fw-bold">Eneo Zilipo: <span class="text-danger"> Kigoma Ujiji </span></span><br>
-                             -->
-                                <span>Bei:</span>
-                                <p class="text-muted"><span class="text-danger">2,000 </span> Kwa Fungu</p>
-                                <span>Idadi Iliyopo:</span>
-                                <p class="text-muted"><span class="text-danger">500 </span> Kilogram</p>
-                                
-                                <div class="row mt-2 d-flex align-items-center justify-content-center">
-                                    <div class="col-md-8 my-3">
-                                        <div class="row d-flex align-items-center">
-                                            <div class="col-5">
-                                                <input type="text" name="qty" id="sst" maxlength="10" value="1" title="Quantity:" class="form-control">
-                                            </div>
-                                            <div class="col-7 d-flex">
-                                                <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;" class="btn mx-1 btn-sm app-btn-secondary increase items-count" type="button"><i class="mdi mdi-plus"></i>KG</button>
-                                                <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) && sst > 0 ) result.value--;return false;" class="btn btn-sm app-btn-secondary reduced items-count" type="button"><i class="mdi mdi-minus"></i>KG</button>
-                                            </div>
+                                <div class="col-md-8 px-4">
+                                    <div class="d-flex justify-content-between py-3 align-items-center">
+                                        <span class=" fw-bold">Bidhaa: <span class="text-danger"><?php echo $row['jina_bidhaa'] ?></span> </span>
+                                        <div class="">
+                                            <img src="<?php echo $row['profiles'] ?>" width="30px" height="30px" alt="" class="rounded-circle">
                                         </div>
                                     </div>
-                                    <div class="col-md-4 my-3">
-                                        <a class="app-btn-secondary btn w-100" href="cart.php">Ongeza Kapuni</a>
-                                    </div>
+                                    <p>
+                                        <?php echo $row['maelezo'] ?>
+                                    </p>
+                                    <!-- <span class="text-muted fw-bold">Bei: <span class="text-danger">1,0000,0000/= </span>Kwa KG</span> <br>
+                                <span class="text-muted fw-bold">Idadi Iliyopo: <span class="text-danger"> 123 </span>KG</span> <br>
+                                <span class="text-muted fw-bold">Eneo Zilipo: <span class="text-danger"> Kigoma Ujiji </span></span><br>
+                                -->
+                                    <span>Bei:</span>
+                                    <p class="text-muted"><span class="text-danger"><?php echo number_format($row['bei']) ?> </span> <?php echo $row['kipimo_bei'] ?></p>
+                                    <span>Idadi Iliyopo:</span>
+                                    <p class="text-muted"><?php echo $row['kipimo_quantity'] ?> <span class="text-danger"><?php echo $row['quantity'] ?> </span> </p>
+
+                                    <form action="../logics/cartServer.php" method="POST">
+                                        <div class="row mt-2 d-flex align-items-center justify-content-center">
+
+                                            <div class="col-md-8 my-3">
+                                                <div class="row d-flex align-items-center">
+                                                    <div class="col-5">
+                                                        <input type="text" name="quantity" id="sst" maxlength="10" value="1" title="Quantity:" class="form-control">
+                                                    </div>
+                                                    <div class="col-7 d-flex">
+                                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) && sst < <?php echo $row['quantity'] ?>) result.value++;return false;" class="btn mx-1 btn-sm app-btn-secondary increase items-count" type="button"><i class="mdi mdi-plus"></i></button>
+                                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) && sst > 1 ) result.value--;return false;" class="btn btn-sm app-btn-secondary reduced items-count" type="button"><i class="mdi mdi-minus"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 my-3">
+                                                <button type="submit" name="add_cart" class="app-btn-secondary btn w-100">Ongeza Kapuni</a>
+                                            </div>
+                                        </div>
+
+                                    </form>
+
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    <?php } ?>
                 </div>
 
             </div>

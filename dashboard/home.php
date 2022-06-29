@@ -32,7 +32,7 @@
                                 Mkulima Janja inakuletea mazao halisi kutoka ka wakulima mbali mbali nchi kote!</div>
 							</div>
 							<div class="app-card-footer p-4 mt-auto">
-								<a class="btn app-btn-secondary" href="mazao.php">Tazama Mazao</a>
+								<a class="btn app-btn-secondary" href="../dashboard/shop.php?bidhaa=mazao">Tazama Mazao</a>
 							</div>
 						</div>
 					</div>
@@ -54,7 +54,7 @@
 								<div class="intro">Tunazo mbolea safi kutoka katik viwanda na maduka yaliyothibitisha na TBS</div>
 							</div>
 							<div class="app-card-footer p-4 mt-auto">
-								<a class="btn app-btn-secondary" href="mbolea.php">Tazama Mbolea</a>
+								<a class="btn app-btn-secondary" href="../dashboard/shop.php?bidhaa=mbolea">Tazama Mbolea</a>
 							</div>
 						</div>
 					</div>
@@ -77,7 +77,7 @@
 								<div class="intro">Dawa za kuua wadudu katika mimea na mazao pia zinapatikana!</div>
 							</div>
 							<div class="app-card-footer p-4 mt-auto">
-								<a class="btn app-btn-secondary" href="madawa.php">Tazama Madawa</a>
+								<a class="btn app-btn-secondary" href="../dashboard/shop.php?bidhaa=madawa">Tazama Madawa</a>
 							</div>
 						</div>
 					</div>

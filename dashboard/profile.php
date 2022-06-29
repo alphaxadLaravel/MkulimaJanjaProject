@@ -13,6 +13,17 @@
         <div class="container-xl">
 
             <h1 class="app-page-title"><i class="mdi mdi-account text-success"></i> Wasifu Wangu</h1>
+            <?php 
+
+                // tambua ni user gan yukokatika session
+                $user_id = $_SESSION['user_id'];
+
+                // Vuta taarifa zake zote hapa
+                $sql = "SELECT * FROM users WHERE id='$user_id'";
+                $data = mysqli_query($conn, $sql);
+
+                while($row = mysqli_fetch_assoc($data)){
+            ?>
             <div class="row gy-4">
                 <div class="col-12 col-lg-6">
                     <div class="app-card app-card-account shadow-sm d-flex flex-column align-items-start">
@@ -36,7 +47,7 @@
                                 <div class="row justify-content-between align-items-center">
                                     <div class="col-auto">
                                         <div class="item-data">
-                                            <img class="profile-image rounded" src="../assets/images/mbuto.jpg" alt="">
+                                            <img class="profile-image rounded" src="<?php echo $row['profiles'] ?>" alt="">
                                         </div>
                                     </div>
                                     <div class="col text-end">
@@ -50,7 +61,7 @@
                                         <div class="item-label"><strong>Jina Kamili</strong></div>
                                     </div>
                                     <div class="col text-end">
-                                        <div class="item-data">mbuto Philimon</div>
+                                        <div class="item-data"><?php echo $row['jina_kamili'] ?></div>
                                     </div>
                                 </div>
                             </div>
@@ -60,7 +71,7 @@
                                         <div class="item-label"><strong>Namba ya Simu</strong></div>
                                     </div>
                                     <div class="col text-end">
-                                        <div class="item-data">+255-743-196-599</div>
+                                        <div class="item-data"><?php echo $row['simu'] ?></div>
                                     </div>
                                 </div>
                             </div>
@@ -70,7 +81,7 @@
                                         <div class="item-label"><strong>Kitengo</strong></div>
                                     </div>
                                     <div class="col text-end">
-                                        <div class="item-data">Muuza Mbolea</div>
+                                        <div class="item-data"><?php echo $row['role'] ?></div>
                                     </div>
                                 </div>
                             </div>
@@ -80,7 +91,7 @@
                                         <div class="item-label"><strong>TIN Namba</strong></div>
                                     </div>
                                     <div class="col text-end">
-                                        <div class="item-data">TIN/12345</div>
+                                        <div class="item-data"><?php echo $row['tin_number'] ?></div>
                                     </div>
                                 </div>
                             </div>
@@ -90,7 +101,7 @@
                                         <div class="item-label"><strong>Username</strong></div>
                                     </div>
                                     <div class="col text-end">
-                                        <div class="item-data">mbutophilis</div>
+                                        <div class="item-data"><?php echo $row['username'] ?></div>
                                     </div>
                                 </div>
                             </div>
@@ -169,7 +180,7 @@
                     <!--//app-card-->
                 </div>
             </div>
-            <!--//row-->
+            <?php }?>
 
         </div>
         <!--//container-fluid-->

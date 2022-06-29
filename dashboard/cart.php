@@ -42,16 +42,27 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php for ($i = 0; $i < 5; $i++) { ?>
+                                        <?php 
+
+                                            // Mtambue user alie request kuona cart
+                                            $user_id = $_SESSION['user_id'];
+
+                                            // Vuta taarifa za cart kulingana na cart alizoweka
+                                            $sql_check = "SELECT * FROM cart JOIN bidhaa ON cart.bidhaa_id = bidhaa.id WHERE cart.user_id ='$user_id'";
+                                            $check = mysqli_query($conn, $sql_check);
+
+                                            while($row = mysqli_fetch_assoc($check)){
+                                        
+                                        ?>
                                             <tr>
-                                                <td class="cell"><img src="../assets/images/product-1.jpg" class="img-fluid rounded" height="35px" width="35px" alt=""></td>
-                                                <td class="cell"><span class="truncate">Mbolea grade A+</span></td>
-                                                <td class="cell"><span class="truncate">Tsh 20, 000/=</span></td>
-                                                <td class="cell"><span class="truncate">20</span></td>
-                                                <td class="cell"><span class="truncate">Tsh 400,000/=</span></td>
+                                                <td class="cell"><img src="<?php echo $row['picha']; ?>" class="img-fluid rounded" height="35px" width="35px" alt=""></td>
+                                                <td class="cell"><span class="truncate"><?php echo $row['jina_bidhaa']; ?></span></td>
+                                                <td class="cell"><span class="truncate">Tsh <?php echo number_format($row['bei']); ?>/=</span></td>
+                                                <td class="cell"><span class="truncate text-danger">x<?php echo $row['added_quantity']; ?></span></td>
+                                                <td class="cell"><span class="truncate">Tsh <?php echo number_format($row['added_quantity'] * $row['bei']) ?>/=</span></td>
                                                 <td class="cell d-flex">
-                                                    <a class="btn-sm app-btn-secondary mx-2" href="#"><i class="mdi mdi-delete text-danger"></i></a>
-                                                    <a class="btn-sm app-btn-secondary" href="bidhaa.php"><i class="mdi mdi-lead-pencil text-primary"></i></a>
+                                                    <a class="btn-sm app-btn-secondary mx-2" href="../logics/deleteCart.php?id=<?php echo $row['id']; ?>"><i class="mdi mdi-delete text-danger"></i></a>
+                                                    <a class="btn-sm app-btn-secondary" href="bidhaa.php?id=<?php echo $row['id']; ?>"><i class="mdi mdi-lead-pencil text-primary"></i></a>
                                                 </td>
                                             </tr>
                                         <?php } ?>

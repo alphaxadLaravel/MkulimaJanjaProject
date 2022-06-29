@@ -19,7 +19,7 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="../dashboard/mazao.php">
+					<a class="nav-link" href="../dashboard/shop.php?bidhaa=mazao">
 						<span class="nav-icon">
 							<i class="fa-solid fa-seedling"></i>
 						</span>
@@ -27,7 +27,7 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="../dashboard/mbolea.php">
+					<a class="nav-link" href="../dashboard/shop.php?bidhaa=mbolea">
 						<span class="nav-icon">
 							<i class="mdi mdi-cloud"></i>
 						</span>
@@ -35,7 +35,7 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="../dashboard/madawa.php">
+					<a class="nav-link" href="../dashboard/shop.php?bidhaa=madawa">
 						<span class="nav-icon">
 							<i class="mdi mdi-flask"></i>
 						</span>

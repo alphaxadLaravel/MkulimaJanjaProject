@@ -30,29 +30,35 @@
 
 				<?php 
 
-					$id = $_SESSION['id'];
+					$user_id = $_SESSION['user_id'];
 
-					$sql = "SELECT * FROM users WHERE id='$id'";
-					$check = mysqli_query($conn, $sql);
+					$sql = "SELECT * FROM users WHERE id='$user_id'";
+					$data = mysqli_query($conn, $sql);
 
-					while($row = mysqli_fetch_assoc($check)){
+					while($row = mysqli_fetch_assoc($data)){
 				?>
 					<div class="app-utilities col-auto">
 						<div class="app-utility-item app-notifications-dropdown dropdown">
-							<a class="dropdown-toggle no-toggle-arrow" id="notifications-dropdown-toggle"
-								data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"
-								title="Notifications">
+							<?php
+
+								// Vuta taarifa za cart kulingana na cart alizoweka
+								$sql = "SELECT sum(added_quantity) AS 'count' FROM cart  WHERE user_id ='$user_id'";
+								$result = mysqli_query($conn, $sql);
+								$check = mysqli_fetch_assoc($result);
+		
+								$count = $check['count'];
+							?>
+							<a class="dropdown-toggle no-toggle-arrow"  href="../dashboard/cart.php" >
 								
 								<i class="fa fa-cart-plus fs-4" width="1em" height="1em" viewBox="0 0 16 16" aria-hidden="true"></i>
-								<span class="icon-badge">0</span>
+								<span class="icon-badge"><?php if($count > 0){ echo $count; } else{ echo 0; } ?></span>
 							</a>
-							<!--//dropdown-toggle-->
 
-							<div class="dropdown-menu p-0" aria-labelledby="notifications-dropdown-toggle">
+							<!-- <div class="dropdown-menu p-0" aria-labelledby="notifications-dropdown-toggle">
 								<div class="dropdown-menu-header p-3">
 									<h5 class="dropdown-menu-title mb-0">Kapu Langu</h5>
 								</div>
-								<!--//dropdown-menu-title-->
+
 								<div class="dropdown-menu-content">
 									<div class="item p-3">
 										<div class="row gx-2 justify-content-between align-items-center">
@@ -84,14 +90,13 @@
 										<a class="link-mask" href="cart.php"></a>
 									</div>
 								</div>
-								<!--//dropdown-menu-content-->
 
 								<div class="dropdown-menu-footer p-2 text-center">
 									<a href="cart.php">Kapu lote</a>
 								</div>
 
-							</div>
-							<!--//dropdown-menu-->
+							</div> -->
+							<?php ?>
 						</div>
 						<!-- another icon can be added here aside CART -->
 
