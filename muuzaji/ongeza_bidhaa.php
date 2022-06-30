@@ -13,7 +13,23 @@
 
             <div class="row g-3 mb-4 align-items-center justify-content-between">
                 <div class="col-auto">
-                    <h1 class="app-page-title mb-0"><i class="mdi mdi-plus text-success"></i> Ongeza Bidhaa!</h1>
+                    <?php
+                    if ($_SESSION['role'] == "mbolea") {
+                    ?>
+                        <h1 class="app-page-title mb-0"><i class="mdi mdi-plus text-success"></i> Ongeza Mbolea!</h1>
+                    <?php } ?>
+
+                    <?php
+                    if ($_SESSION['role'] == "mazao") {
+                    ?>
+                        <h1 class="app-page-title mb-0"><i class="mdi mdi-plus text-success"></i> Ongeza Mazao!</h1>
+                    <?php } ?>
+
+                    <?php
+                    if ($_SESSION['role'] == "madawa") {
+                    ?>
+                        <h1 class="app-page-title mb-0"><i class="mdi mdi-plus text-success"></i> Ongeza Madawa!</h1>
+                    <?php } ?>
                 </div>
             </div>
 
@@ -42,7 +58,7 @@
 
                             <div class="row">
                                 <div class="col-md-6">
-                                <label for="setting-input-1" class="form-label">Bei ya Bidhaa <span class="text-danger">*</span></label>
+                                    <label for="setting-input-1" class="form-label">Bei ya Bidhaa <span class="text-danger">*</span></label>
 
                                     <div class="row">
                                         <div class="col-7">
@@ -56,13 +72,30 @@
                                         <div class="col-5">
                                             <div class="mb-3">
                                                 <select class="form-select " name="measure1">
-                                                    <option value=" ">kipimo..</option>
-                                                    <option value="kwa kilogram">kwa Kilogram</option>
-                                                    <option value="kwa Fungu">kwa Fungu</option>
-                                                    <option value="kwa Mafungu">kwa Mafungu</option>
-                                                    <option value="kwa Gunia">kwa Gunia</option>
-                                                    <option value="kwa Debe">kwa Debe</option>
-                                                    <option value="kwa Ndoo">kwa Ndoo</option>
+                                                    <?php
+                                                    if ($_SESSION['role'] == "mbolea" || $_SESSION['role'] == "mazao") {
+                                                    ?>
+                                                        <option value=" ">kipimo..</option>
+                                                        <option value="kwa kilogram">kwa Kilogram</option>
+                                                        <option value="kwa Fungu">kwa Fungu</option>
+                                                        <option value="kwa Mafungu">kwa Mafungu</option>
+                                                        <option value="kwa Gunia">kwa Gunia</option>
+                                                        <option value="kwa Debe">kwa Debe</option>
+                                                        <option value="kwa Ndoo">kwa Ndoo</option>
+                                                    <?php } ?>
+                                                    <?php
+                                                    if ($_SESSION['role'] == "madawa") {
+                                                    ?>
+                                                        <option value=" ">kipimo..</option>
+                                                        <option value="kwa Lita">kwa Lita</option>
+                                                        <option value="kwa Chupa">kwa Chupa</option>
+                                                        <option value="kwa Katoni">kwa katoni</option>
+                                                        <option value="kwa Pakti">kwa Pakti</option>
+                                                        <option value="kwa Box">kwa Box</option>
+                                                        <option value="kwa Ndoo">kwa Ndoo</option>
+                                                        <option value="kwa Kidonge">kwa Kidonge</option>
+                                                    <?php } ?>
+
                                                 </select>
                                             </div>
                                         </div>
@@ -81,13 +114,29 @@
                                         <div class="col-5">
                                             <div class="mb-3">
                                                 <select class="form-select " name="measure2">
-                                                    <option value=" ">kipimo..</option>
-                                                    <option value="kilogram">Kilogram</option>
-                                                    <option value="Fungu">Fungu</option>
-                                                    <option value="Mafungu">Mafungu</option>
-                                                    <option value="Gunia">Gunia</option>
-                                                    <option value="Debe">Debe</option>
-                                                    <option value="Ndoo">Ndoo</option>
+                                                    <?php
+                                                    if ($_SESSION['role'] == "mbolea" || $_SESSION['role'] == "mazao") {
+                                                    ?>
+                                                        <option value=" ">kipimo..</option>
+                                                        <option value="kilogram">Kilogram</option>
+                                                        <option value="Fungu">Fungu</option>
+                                                        <option value="Mafungu">Mafungu</option>
+                                                        <option value="Gunia">Gunia</option>
+                                                        <option value="Debe">Debe</option>
+                                                        <option value="Ndoo">Ndoo</option>
+                                                    <?php } ?>
+                                                    <?php
+                                                    if ($_SESSION['role'] == "madawa") {
+                                                    ?>
+                                                        <option value=" ">kipimo..</option>
+                                                        <option value="Lita">Lita</option>
+                                                        <option value="Chupa">Chupa</option>
+                                                        <option value="Katoni">katoni</option>
+                                                        <option value="Pakti">Pakti</option>
+                                                        <option value="Box">Box</option>
+                                                        <option value="Ndoo">Ndoo</option>
+                                                        <option value="Kidonge">Kidonge</option>
+                                                    <?php } ?>
                                                 </select>
                                             </div>
                                         </div>
@@ -104,7 +153,7 @@
                                 </div>
                             </div>
                             <div class="d-flex justify-content-end">
-                                <button type="submit" name="ongeza" class="btn app-btn-primary">Ongeza Bidhaa</button>
+                                <button type="submit" name="ongeza" class="btn app-btn-primary">Ongeza Hapa</button>
                             </div>
 
                         </form>

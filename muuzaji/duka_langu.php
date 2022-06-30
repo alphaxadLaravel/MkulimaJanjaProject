@@ -43,13 +43,24 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php for ($i = 0; $i < 5; $i++) { ?>
+                                    <?php
+
+                                    include "../logics/connection.php";
+
+                                    $user_id = $_SESSION['user_id'];
+
+                                    $sql = "SELECT * FROM bidhaa WHERE user_id='$user_id' ORDER BY id Desc";
+                                    $check = mysqli_query($conn, $sql);
+
+                                    while ($row = mysqli_fetch_assoc($check)) {
+
+                                    ?>
                                         <tr>
-                                            <td class="cell"><img src="../assets/images/product-1.jpg" class="img-fluid rounded" height="35px" width="35px" alt=""></td>
-                                            <td class="cell"><span class="truncate">Mbolea grade A+</span></td>
-                                            <td class="cell"><span class="truncate">Tsh 20, 000/=</span></td>
-                                            <td class="cell"><span class="truncate">30</span></td>
-                                            <td class="cell"><span class="truncate">Hii bidhaa inapatikan mda wote lipia nikuletee ulipo</span></td>
+                                            <td class="cell"><img src="<?php echo $row['picha']; ?>" class="img-fluid rounded" height="35px" width="35px" alt=""></td>
+                                            <td class="cell"><span class="truncate"><?php echo $row['jina_bidhaa']; ?></span></td>
+                                            <td class="cell"><span class="truncate">Tsh <?php echo number_format($row['bei']); ?>/= <?php echo $row['kipimo_bei']; ?> </span></td>
+                                            <td class="cell"><span class="truncate"><?php echo $row['quantity']; ?> <?php echo $row['kipimo_quantity']; ?></span></td>
+                                            <td class="cell"><span class="truncate"><?php echo $row['maelezo']; ?></span></td>
                                             <td class="cell d-inline-flex">
                                                 <a class="mx-2 btn-sm btn app-btn-secondary" href="#"><i class="mdi mdi-delete text-danger "></i></a>
                                                 <a class="btn-sm btn app-btn-secondary" href="ongeza_bidhaa.php"><i class="mdi mdi-pencil text-primary "></i></a>

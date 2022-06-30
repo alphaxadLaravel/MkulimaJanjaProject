@@ -112,7 +112,15 @@
             $_SESSION['user_id'] = $data['id'];
             $_SESSION['role'] = $data['role'];
 
-            exit(header("Location: ../dashboard/home.php"));
+            if($data['role'] == "admin"){
+
+                exit(header("Location: ../admin/admin_dashboard.php"));
+
+            }else{
+                exit(header("Location: ../dashboard/home.php"));
+
+            }
+
 
         }else{
             echo "Tafadhari hakiki taarifa zako...";

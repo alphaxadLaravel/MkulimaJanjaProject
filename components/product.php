@@ -2,7 +2,7 @@
 
 function productCard($conn,$page_request){
 
-    $sql = "SELECT * FROM bidhaa where category ='$page_request'";
+    $sql = "SELECT * FROM bidhaa where category ='$page_request' ORDER BY id Desc";
     $check = mysqli_query($conn, $sql);
 
     while($row = mysqli_fetch_assoc($check)){

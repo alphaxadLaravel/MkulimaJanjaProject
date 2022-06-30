@@ -56,9 +56,13 @@
                                 <span class="text-muted fw-bold">Idadi Iliyopo: <span class="text-danger"> 123 </span>KG</span> <br>
                                 <span class="text-muted fw-bold">Eneo Zilipo: <span class="text-danger"> Kigoma Ujiji </span></span><br>
                                 -->
-                                    <span>Bei:</span>
-                                    <p class="text-muted"><span class="text-danger"><?php echo number_format($row['bei']) ?> </span> <?php echo $row['kipimo_bei'] ?></p>
-                                    <span>Idadi Iliyopo:</span>
+                                    <span class="fw-bold">Bei:</span>
+                                    <!-- <p class="text-muted"><span class="text-danger"><?php echo number_format($row['bei']) ?> </span> <?php echo $row['kipimo_bei'] ?></p> -->
+                                    <div class="d-flex justify-content-start align-items-end">
+                                    <h2 class="text-muted"><span class="text-danger"><?php echo number_format($row['bei']) ?>/= </span> </h2> <small><?php echo $row['kipimo_bei'] ?></small>
+
+                                    </div>
+                                    <span class="fw-bold">Idadi Iliyopo:</span>
                                     <p class="text-muted"><?php echo $row['kipimo_quantity'] ?> <span class="text-danger"><?php echo $row['quantity'] ?> </span> </p>
 
                                     <form action="../logics/cartServer.php" method="POST">

@@ -17,7 +17,7 @@
         $measure2 = mysqli_real_escape_string($conn, $_POST['measure2']);
 
         $description = mysqli_real_escape_string($conn, $_POST['description']);
-        $user_id = $_SESSION['id'];
+        $user_id = $_SESSION['user_id'];
         $category = $_SESSION['role'];
 
         $bei ="$bei";
@@ -42,7 +42,7 @@
                     VALUES ('$user_id','$bidhaa','$bei','$measure1','$description','$quantity','$measure2','$category','$fileDestination')";
                     mysqli_query($conn, $sql);
             
-                    exit(header("Location: ongeza_bidhaa.php"));
+                    exit(header("Location: ../muuzaji/duka_langu.php"));
 
                 }else{
                     echo " <script> alert('The image uploaded is too large'); </script> ";
