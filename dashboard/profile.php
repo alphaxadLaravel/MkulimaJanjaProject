@@ -252,21 +252,6 @@
                                     </div>
                                     <!--//row-->
                                 </div>
-                                <!--//item-->
-                                <div class="item border-bottom py-3">
-                                    <div class="row justify-content-between align-items-center">
-                                        <div class="col-auto">
-                                            <div class="item-label"><strong><i class="mdi mdi-lock"></i> Neno Siri</strong></div>
-                                        </div>
-                                        <!--//col-->
-                                        <div class="col text-end">
-                                            <div class="item-data">••••••••</div>
-                                        </div>
-                                        <!--//col-->
-                                    </div>
-                                    <!--//row-->
-                                </div>
-                                <!--//item-->
                             </div>
                             <div class="app-card-footer p-4 mt-auto">
                                 <a class="btn btn-danger text-white" href="#">Futa Account Yako</a>
