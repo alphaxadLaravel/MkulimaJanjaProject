@@ -54,7 +54,7 @@
 										<option value="mazao">Mazao</option>
 										<option value="mbolea">Mbolea</option>
 										<option value="madawa">Madawa</option>
-										<option value="mbolea">Mbolea</option>
+										
 									</select>
 
 								</div>

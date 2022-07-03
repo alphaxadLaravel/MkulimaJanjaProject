@@ -21,30 +21,30 @@
         if($pwd1 == $pwd2){
 
             // Kagua katika Table ya Brellah hapa
-            $sql = "SELECT * FROM brellah WHERE tin_number ='$tin'";
+            $sql = "SELECT * FROM brellah WHERE tin_number ='$tin' AND jina_kamili='$jina'";
             $check = mysqli_query($conn, $sql);
 
            if(mysqli_num_rows($check) == 1){
                 // kagua kama kuna user ana username na password kama ya Jamaa
-                $query = "SELECT * FROM users WHERE username ='$username' AND password='$pwd1'";
+                $query = "SELECT * FROM users WHERE username ='$username'";
                 $check = mysqli_query($conn, $query);
                 $data = mysqli_fetch_assoc($check);
 
-                if(mysqli_num_rows($check) != 1){
+                if(mysqli_num_rows($check) >= 1){
+
+                    echo "Jina limekwisha tumika badili..";
                     
+                }else{
                     // Msajili katika Database table ya Users kama kila kitu kiko sawa
                     $sql = "INSERT INTO `users`(`jina_kamili`, `username`, `password`, 
                     `simu`, `tin_number`, `role`, `status`) VALUES ('$jina','$username','$pwd1','$simu','$tin','$role','active')";
                     mysqli_query($conn, $sql);
 
                     exit(header("Location: ../outside/login.php"));
-                    
-                }else{
-                    echo "Kuna mtumiaji ana Details kama zako...";
                 }
 
            }else{
-                echo "TIN Number yako hatambuliki na BRELLAH..";
+                echo "TIN Number au jina havitambuliki na BRELLAH..";
            }
         }else{
             echo "Password ulizoingiza hazifanani";
@@ -54,8 +54,6 @@
 
     // Button ya kujisajili kama Member ikibonyezwa
     if(isset($_POST['member'])){
-
-        echo "Listening you....";
 
         // Pokea data zinazotoka katika form
         $username = mysqli_real_escape_string($conn, $_POST['username']);
@@ -68,21 +66,21 @@
         if($pwd1 == $pwd2){
 
             // Kagua kama Mtumiaji mwingne yupo ana details kam hzo
-            $query = "SELECT * FROM users WHERE username ='$username' AND password='$pwd1'";
+            $query = "SELECT * FROM users WHERE username ='$username'";
             $check = mysqli_query($conn, $query);
             $data = mysqli_fetch_assoc($check);
 
-            if(mysqli_num_rows($check) != 1){
+            if(mysqli_num_rows($check) >= 1){
+                echo "Kuna mtumiaji ana Details kama zako...";
+               
 
+            }else{
                 // Msajili katika database table ya users kama kila kitu kiko sawa
-                 $sql = "INSERT INTO `users`(`jina_kamili`, `username`, `password`, 
+                    $sql = "INSERT INTO `users`(`jina_kamili`, `username`, `password`, 
                 `simu`, `status`) VALUES ('$jina','$username','$pwd1','$simu','active')";
                 mysqli_query($conn, $sql);
 
                 exit(header("Location: ../outside/login.php"));
-
-            }else{
-                echo "Kuna mtumiaji ana Details kama zako...";
             }
 
         }else{
