@@ -38,6 +38,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="app-card-body px-4 w-100">
 
                                 <div class="item border-bottom py-3">
@@ -46,7 +47,19 @@
                                             <div class="item-label"><strong>Jumla ya Bidhaa</strong></div>
                                         </div>
                                         <div class="col text-end">
-                                            <div class="item-data">x100</div>
+                                            <?php
+
+                                            $user_id = $_SESSION['user_id'];
+
+                                            $sql = "SELECT sum(added_quantity) AS 'count' FROM cart  WHERE user_id ='$user_id'";
+                                            $result = mysqli_query($conn, $sql);
+                                            $check = mysqli_fetch_assoc($result);
+
+                                            $total_bidhaa = $check['count'];
+                                            ?>
+                                            <div class="item-data">x<?php echo $total_bidhaa; ?></div>
+                                            <?php ?>
+
                                         </div>
                                     </div>
                                 </div>
@@ -57,7 +70,19 @@
                                             <div class="item-label"><strong>Gharama Jumla</strong></div>
                                         </div>
                                         <div class="col text-end">
-                                            <div class="item-data fw-bolder text-danger">Tsh 10,000/=</div>
+                                            <?php
+
+                                                $user_id = $_SESSION['user_id'];
+
+                                                $sql = "SELECT sum(total_cost) AS 'costs' FROM cart WHERE cart.user_id ='$user_id'";
+                                                $result = mysqli_query($conn, $sql);
+                                                $check = mysqli_fetch_assoc($result);
+
+                                                $total_costs = $check['costs'];
+                                            ?>
+                                            <div class="item-data fw-bolder text-danger">Tsh <?php echo number_format($total_costs);  ?>/=</div>
+                                            <?php ?>
+
                                         </div>
                                     </div>
                                 </div>
@@ -86,7 +111,7 @@
                             </div>
                             <div class="app-card-body px-4 w-100">
 
-                                
+
 
                                 <div class="row">
                                     <div class="col-md-6">
@@ -271,16 +296,14 @@
                                         </div>
                                     </div>
                                     <div class="row py-2">
-                                        <button type="submit" class="btn btn-danger w-100 text-white" >
-                                            Lipia  </button>
+                                        <button type="submit" class="btn btn-danger w-100 text-white">
+                                            Lipia </button>
                                     </div>
 
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
 
                 </div>
             </form>

@@ -38,8 +38,8 @@
                     $fileDestination = '../upload/'.time().$fileName;
                     move_uploaded_file($_FILES['file']['tmp_name'],$fileDestination);
 
-                    $sql = "INSERT INTO `bidhaa`(`user_id`, `jina_bidhaa`, `bei`, `kipimo_bei`, `maelezo`, `quantity`, `kipimo_quantity`, `category`, `picha`) 
-                    VALUES ('$user_id','$bidhaa','$bei','$measure1','$description','$quantity','$measure2','$category','$fileDestination')";
+                    $sql = "INSERT INTO `bidhaa`(`user_id`, `jina_bidhaa`, `bei`, `kipimo_bei`, `maelezo`, `quantity`, `kipimo_quantity`, `category`, `picha`,`status`) 
+                    VALUES ('$user_id','$bidhaa','$bei','$measure1','$description','$quantity','$measure2','$category','$fileDestination', 'inasubiri...')";
                     mysqli_query($conn, $sql);
             
                     exit(header("Location: ../muuzaji/duka_langu.php"));
@@ -54,9 +54,6 @@
             echo " <script> alert('Check The image Field Please!!'); </script> ";
         }
     }
-
-
-
 
 
 ?>

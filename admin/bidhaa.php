@@ -44,25 +44,36 @@
                                         <th class="cell">Kitengo </th>
                                         <th class="cell">Bei</th>
                                         <th class="cell">Muuzaji</th>
-                                        <th class="cell">Inapatikana</th>
-                                        <th class="cell">Block</th>
+                                        <th class="cell">Kilichopo</th>
+                                        <th class="cell">Hali</th>
+                                        <th class="cell">Manage</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php for ($i = 0; $i < 10; $i++) { ?>
+                                    <?php
+
+                                        $sql = "SELECT * FROM users JOIN bidhaa ON bidhaa.user_id = users.id ORDER BY bidhaa.id Desc";
+                                        $check = mysqli_query($conn, $sql);
+
+                                        while ($row = mysqli_fetch_assoc($check)) {
+
+                                    ?>
                                         <tr>
-                                            <td class="cell"><img src="../assets/images/product-1.jpg" class="img-fluid rounded" height="45px" width="45px" alt=""></td>
-                                            <td class="cell"><span class="truncate">Nyanya za Mchuzi</span></td>
-                                            <td class="cell"><span class="truncate text-danger">Mazao</span></td>
-                                            <td class="cell"><span class="truncate text-success">100,000 @ kg</span>
-                                            <td class="cell"><span class="truncate">Alphaxad Jozee</span>
-                                            <td class="cell"><span class="truncate">kigamboni, Dar-es-Salaam</span>
+                                            <td class="cell"><img src="<?php echo $row['picha']; ?>" class=" rounded" height="40px" width="40px" alt=""></td>
+                                            <td class="cell"><span class="truncate"><?php echo ucwords($row['jina_bidhaa']);  ?></span></td>
+                                            <td class="cell"><span class="truncate text-danger"><?php echo $row['category'] ?></span></td>
+                                            <td class="cell"><span class="truncate text-success"><?php echo number_format( $row['bei'])." ".$row['kipimo_bei']; ?> </span>
+                                            <td class="cell"><span class="truncate"><?php echo ucwords($row['jina_kamili']); ?></span>
+                                            <td class="cell"><span class="truncate"><?php echo $row['kipimo_quantity']." ".$row['quantity']; ?></span>
+                                            <td class="cell"><span class="truncate text-success"><?php echo $row['status'] ?></span>
                                             </td>
-                                            <td class="cell d-flex">
-                                                <a class="mx-2 btn-sm btn app-btn-secondary" href="#">🚫</a>
+                                            <td class="gy-2">
+                                                <a class="mx-2 btn-sm btn app-btn-secondary" href="../logics/blockBidhaa.php?id=<?php echo $row['id']; ?>"><i class="mdi mdi-block-helper"></i></a>
+                                                <a class="mx-2 btn-sm btn app-btn-secondary" href="../logics/activateBidhaa.php?id=<?php echo $row['id']; ?>"><i class="mdi mdi-check-all"></i></a>
                                             </td>
                                         </tr>
                                     <?php } ?>
+                                    
                                 </tbody>
                             </table>
                         </div>
@@ -70,7 +81,7 @@
                     </div>
                 </div>
 
-                <div class="d-flex justify-content-center">
+                <!-- <div class="d-flex justify-content-center">
                     <nav class="app-pagination my-3">
                         <ul class="pagination justify-content-center">
                             <li class="page-item disabled">
@@ -84,7 +95,7 @@
                             </li>
                         </ul>
                     </nav>
-                </div>
+                </div> -->
 
             </div>
         </div>

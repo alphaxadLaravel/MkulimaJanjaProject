@@ -2,12 +2,10 @@
 
 function productCard($conn,$page_request){
 
-    $sql = "SELECT * FROM bidhaa where category ='$page_request' ORDER BY id Desc";
+    $sql = "SELECT * FROM bidhaa where (category ='$page_request' AND status = 'active') ORDER BY id Desc";
     $check = mysqli_query($conn, $sql);
 
     while($row = mysqli_fetch_assoc($check)){
-
-
 ?>
 
 <div class="col-md-3 my-3 wow fadeInUp" data-wow-delay="0.1s">

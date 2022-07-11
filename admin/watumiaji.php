@@ -43,24 +43,30 @@
                                         <th class="cell">Jinakamili</th>
                                         <th class="cell">Username</th>
                                         <th class="cell">Simu</th>
-                                        <th class="cell">TIN Namba</th>
                                         <th class="cell">Jukumu</th>
-                                        <th class="cell">Block</th>
+                                        <!-- <th class="cell">Block</th> -->
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php for ($i = 0; $i < 10; $i++) { ?>
+                                    <?php
+
+                                    $sql = "SELECT * FROM users where role !='admin' ORDER BY id Desc";
+                                    $check = mysqli_query($conn, $sql);
+
+                                    while ($row = mysqli_fetch_assoc($check)) {
+
+
+                                    ?>
                                         <tr>
-                                            <td class="cell"><img src="../assets/images/mbuto.jpg" class="img-fluid rounded" height="45px" width="45px" alt=""></td>
-                                            <td class="cell"><span class="truncate">Alpha Jozee Kakulu</span></td>
-                                            <td class="cell"><span class="truncate">alphajozee</span>
-                                            <td class="cell"><span class="truncate">+255-743-196-599</span>
-                                            <td class="cell"><span class="truncate">TIN-12345-K</span>
-                                            <td class="cell"><span class="truncate text-success">Muuza Mbolea</span>
+                                            <td class="cell"><img src="<?php echo $row['profiles']; ?>" class=" rounded-circle" height="40px" width="40px" alt=""></td>
+                                            <td class="cell"><span class="truncate"><?php echo ucwords($row['jina_kamili']); ?></span></td>
+                                            <td class="cell"><span class="truncate"><?php echo ucwords($row['username']); ?></span>
+                                            <td class="cell"><span class="truncate"><?php echo ucwords($row['simu']); ?></span>
+                                            <td class="cell"><span class="truncate text-success"><?php echo ucwords($row['role']); ?></span>
                                             </td>
-                                            <td class="cell d-flex">
+                                            <!-- <td class="cell d-flex">
                                                 <a class="mx-2 btn-sm btn app-btn-secondary" href="#">🚫</a>
-                                            </td>
+                                            </td> -->
                                         </tr>
                                     <?php } ?>
                                 </tbody>
@@ -70,7 +76,7 @@
                     </div>
                 </div>
 
-                <div class="d-flex justify-content-center">
+                <!-- <div class="d-flex justify-content-center">
                     <nav class="app-pagination my-3">
                         <ul class="pagination justify-content-center">
                             <li class="page-item disabled">
@@ -84,7 +90,7 @@
                             </li>
                         </ul>
                     </nav>
-                </div>
+                </div> -->
 
             </div>
         </div>
