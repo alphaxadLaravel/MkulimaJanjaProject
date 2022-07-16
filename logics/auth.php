@@ -109,6 +109,7 @@
             $_SESSION['username'] = $data['username'];
             $_SESSION['user_id'] = $data['id'];
             $_SESSION['role'] = $data['role'];
+            $_SESSION['simu'] = $data['simu'];
 
             if($data['role'] == "admin"){
 

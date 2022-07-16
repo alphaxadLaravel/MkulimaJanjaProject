@@ -72,13 +72,13 @@
                                         <div class="col text-end">
                                             <?php
 
-                                                $user_id = $_SESSION['user_id'];
+                                            $user_id = $_SESSION['user_id'];
 
-                                                $sql = "SELECT sum(total_cost) AS 'costs' FROM cart WHERE cart.user_id ='$user_id'";
-                                                $result = mysqli_query($conn, $sql);
-                                                $check = mysqli_fetch_assoc($result);
+                                            $sql = "SELECT sum(total_cost) AS 'costs' FROM cart WHERE cart.user_id ='$user_id'";
+                                            $result = mysqli_query($conn, $sql);
+                                            $check = mysqli_fetch_assoc($result);
 
-                                                $total_costs = $check['costs'];
+                                            $total_costs = $check['costs'];
                                             ?>
                                             <div class="item-data fw-bolder text-danger">Tsh <?php echo number_format($total_costs);  ?>/=</div>
                                             <?php ?>
@@ -95,9 +95,9 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6 mb-2" id="step1">
-                        <div class="app-card  shadow-sm d-flex flex-column align-items-start">
-                            <div class="app-card-header p-3 border-bottom-0">
+                    <div class="col-md-6 mb-2">
+                        <div class="app-card pb-5 shadow-sm d-flex flex-column align-items-start">
+                            <div class="app-card-header p-3  border-bottom-0">
                                 <div class="row align-items-center gx-3">
                                     <div class="col-auto">
                                         <div class="app-icon-holder">
@@ -110,19 +110,15 @@
                                 </div>
                             </div>
                             <div class="app-card-body px-4 w-100">
-
-
-
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <small for="setting-input-1" class="form-label">Mkoa Uliopo<span class="text-danger">*</span></small>
-                                            <select class="form-select " required="">
-                                                <option value=" "></option>
+                                            <select class="form-select " id="mkoa" required="" name="mkoa">
                                                 <option value="">Chagua Mkoa uliopo...</option>
                                                 <option value="mwanza">Mwanza</option>
-                                                <option value="mwanza">Dodoma</option>
-                                                <option value="mwanza">Dar</option>
+                                                <option value="Dodoma">Dodoma</option>
+                                                <option value="Dar">Dar</option>
                                             </select>
                                         </div>
                                     </div>
@@ -130,7 +126,6 @@
                                         <div class="mb-3">
                                             <small for="setting-input-1" class="form-label">Wilaya Uliyopo<span class="text-danger">*</span></small>
                                             <select class="form-select " required="">
-                                                <option value=" "></option>
                                                 <option value="">Chagua wilaya uliyopo...</option>
                                                 <option value="mwanza">Ilala</option>
                                                 <option value="mwanza">Temeke</option>
@@ -153,17 +148,14 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-end py-2">
-                                    <button class="btn app-btn-primary" onclick="goStep2()">
-                                        Endelea <i class="mdi mdi-arrow-right"></i></button>
-                                </div>
+
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-md-6 mb-2" id="step2" style="display: none;">
-                        <div class="app-card shadow-sm d-flex flex-column align-items-start">
-                            <div class="app-card-header p-3 border-bottom-0">
+                    <div class="col-md-6 mb-2">
+                        <div class="app-card pb-5 shadow-sm d-flex flex-column align-items-start">
+                            <div class="app-card-header p-3  border-bottom-0">
                                 <div class="row align-items-center gx-3">
                                     <div class="col-auto">
                                         <div class="app-icon-holder">
@@ -190,7 +182,7 @@
                                                 <div class="col text-end">
                                                     <div class="form-check">
                                                         <label class="form-check-label">
-                                                            <input type="radio" class="form-check-input" style="cursor: pointer;" name="branch" id="" value="checkedValue">
+                                                            <input type="radio" class="form-check-input" style="cursor: pointer;" name="branch" required="" value="Tigo Pesa">
                                                         </label>
                                                     </div>
                                                 </div>
@@ -207,7 +199,7 @@
                                                 <div class="col text-end">
                                                     <div class="form-check">
                                                         <label class="form-check-label">
-                                                            <input type="radio" class="form-check-input" style="cursor: pointer;" name="branch" id="" value="checkedValue">
+                                                            <input type="radio" class="form-check-input" style="cursor: pointer;" name="branch" required="" value="T Pesa">
                                                         </label>
                                                     </div>
                                                 </div>
@@ -225,7 +217,7 @@
                                                 <div class="col text-end">
                                                     <div class="form-check">
                                                         <label class="form-check-label">
-                                                            <input type="radio" class="form-check-input" style="cursor: pointer;" name="branch" id="" value="checkedValue">
+                                                            <input type="radio" class="form-check-input" style="cursor: pointer;" name="branch" required="" value="Airtel Money">
                                                         </label>
                                                     </div>
                                                 </div>
@@ -242,7 +234,7 @@
                                                 <div class="col text-end">
                                                     <div class="form-check">
                                                         <label class="form-check-label">
-                                                            <input type="radio" class="form-check-input" style="cursor: pointer;" name="branch" id="" value="checkedValue">
+                                                            <input type="radio" class="form-check-input" style="cursor: pointer;" name="branch" required="" value="M-Pesa">
                                                         </label>
                                                     </div>
                                                 </div>
@@ -250,15 +242,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-end py-2">
-                                    <button class="btn app-btn-primary" onclick="goStep3()">
-                                        Endelea <i class="mdi mdi-arrow-right"></i></button>
-                                </div>
+
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-md-6 mb-2" id="step3" style="display: none;">
+                    <div class="col-md-6 mb-2">
                         <div class="app-card pb-3 shadow-sm d-flex flex-column align-items-start">
                             <div class="app-card-header p-3 border-bottom-0">
                                 <div class="row align-items-center gx-3">
@@ -271,18 +260,17 @@
                                         </div>
                                     </div>
                                     <div class="col-auto">
-                                        <h4 class="app-card-title">Ingiza PIN</h4>
+                                        <h4 class="app-card-title">Fanya Malipo</h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="app-card-body px-4 w-100">
                                 <div class="app-card-body px-4 w-100">
                                     <div class="item mb-2">
-
                                         <div class="row justify-content-between align-items-center">
                                             <div class="col-auto">
                                                 <div class="item-label"><strong>Namba ya Malipo</strong></div>
-                                                <div class="item-data">+255-743-196-599 </div>
+                                                <div class="item-data"><?php echo $_SESSION['simu']; ?> </div>
                                             </div>
                                             <div class="col text-end">
                                                 <a class="btn-sm btn-outline-success" href="profile.php"><i class="mdi mdi-pencil"></i></a>
@@ -295,9 +283,8 @@
                                             <input type="number" class="form-control" id="setting-input-1" value="" placeholder="...." required="">
                                         </div>
                                     </div>
-                                    <div class="row py-2">
-                                        <button type="submit" class="btn btn-danger w-100 text-white">
-                                            Lipia </button>
+                                    <div class="item py-2">
+                                        <button type="submit" class="btn btn-success w-100 text-white"> Lipia </button>
                                     </div>
 
                                 </div>
@@ -307,26 +294,6 @@
 
                 </div>
             </form>
-
-            <script>
-                function goStep2() {
-
-                    var step1 = document.getElementById("step1");
-                    var step2 = document.getElementById("step2");
-
-                    step2.style.display = "block";
-                    step1.style.display = "none";
-                }
-
-                function goStep3() {
-
-                    var step2 = document.getElementById("step2");
-                    var step3 = document.getElementById("step3");
-
-                    step3.style.display = "block";
-                    step2.style.display = "none";
-                }
-            </script>
 
         </div>
 

@@ -16,16 +16,7 @@
                 <div class="col-auto">
                     <h1 class="app-page-title mb-0"><i class="mdi mdi-clipboard-outline text-danger"></i> Bidhaa!</h1>
                 </div>
-                <div class="col-auto">
-                    <div class="page-utilities">
-                        <div class="row g-2 justify-content-start justify-content-md-end align-items-center">
-                            <div class="col-auto">
-                                <a class="btn app-btn-primary" href="malipo.php"> <i class="mdi mdi-check-all"></i>
-                                    Nunua Sahivi</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               
                 <div class="row g-1">
                     <?php
                     $bidhaa = $_GET['id'];

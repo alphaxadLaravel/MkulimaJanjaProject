@@ -1,0 +1,21 @@
+##### VITU AMBAVYO BADO ####
+
+>> Search na Filter Zote
+>> Font & Arrengements Formattings
+>> Kununua Bidhaa Moja bila kupitia Cart
+>> Multi Stepping Form ya Purchase
+>> Validations 
+>> Error Handling Zote
+>> Delete & Upadings Zote
+>> Elimu Adding
+>> Bwana Shamba Panel
+>> Wanunuaji
+>> Nimenunua
+>> Admin Kugawa Miamala
+>> Kuona Fedha Katika Dashboard
+>> Kusoma Elimu kwa topics
+>> Kuboresha Index landing page
+>> Paginations
+>> DAshboard Show up After Activation
+>> Block &  Activate Users
+>> Kuongeza Bwana Shmba
