@@ -51,11 +51,14 @@
                 $check = mysqli_query($conn, $sql);
 
                 while ($row = mysqli_fetch_assoc($check)) {
+
+                    // Tengeneza usefull variable kutoka katika cart hapa
                     $bidhaa = $row['bidhaa_id'];
                     $idadi = $row['added_quantity'];
                     $total = $row['total_cost'];
+
                     // insert katika table ya malipo
-                    $sql ="INSERT INTO `malipo`(`user_id`, `mkoa`, `wilaya`, `branch`, `simu_mpokeaji`, `mahali`, `bidhaa_id`, `idadi`, `total`) VALUES ('$user_id','$mkoa','$wilaya','$branch','$simu','$mahali','$bidhaa','$idadi','$total')";
+                    $sql ="INSERT INTO `malipo`(`user_id`, `mkoa`, `wilaya`, `branch`, `simu_mpokeaji`, `mahali`, `bidhaa_id`, `idadi`, `total`, `jina_muuzaji`) VALUES ('$user_id','$mkoa','$wilaya','$branch','$simu','$mahali','$bidhaa','$idadi','$total','Alpha Jozee')";
                     mysqli_query($conn, $sql);
 
                     // Pata Taarifa za Bidhaa, Hasa idadi iliyopo

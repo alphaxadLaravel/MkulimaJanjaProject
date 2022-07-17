@@ -45,29 +45,30 @@
                                         <th class="cell">Kiasi</th>
                                         <th class="cell">Idadi</th>
                                         <th class="cell">Tawi</th>
-                                        <th class="cell">Thibitisha</th>
+                                        <th class="cell">Hali</th>
+                                        <th class="cell">Hamisha</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
 
-                                        $sql = "SELECT * FROM malipo JOIN users ON malipo.user_id = users.id";
+                                        $sql = "SELECT * FROM malipo JOIN users ON malipo.user_id = users.id JOIN bidhaa ON malipo.bidhaa_id = bidhaa.id";
                                         // JOIN bidhaa ON bidhaa.user_id = users.id ORDER BY bidhaa.id Desc
                                         $check = mysqli_query($conn, $sql);
 
                                         while ($row = mysqli_fetch_assoc($check)) {
-
                                 
                                     ?>
                                         <tr>
-                                            <td class="cell"><span class="truncate"><?php echo $row['jina_kamili']; ?></span></td>
-                                            <td class="cell"><span class="truncate">Philmon Mbuto Philmon</span></td>
-                                            <td class="cell"><span class="truncate text-success">Mazao</span>
-                                            <td class="cell"><span class="truncate ">200,0000</span>
-                                            <td class="cell"><span class="truncate ">Airtel Money</span>
-                                            <td class="cell"><span class="truncate">adsadsad</span>
+                                            <td class="cell"><span class="truncate"><?php echo ucwords($row['jina_kamili']); ?></span></td>
+                                            <td class="cell"><span class="truncate"><?php echo ucwords($row['jina_muuzaji']); ?></span></td>
+                                            <td class="cell"><span class="truncate text-success"><?php echo ucwords($row['jina_bidhaa']); ?></span>
+                                            <td class="cell"><span class="truncate "><?php echo ucwords($row['total']); ?></span>
+                                            <td class="cell"><span class="truncate"><?php echo ucwords($row['idadi']); ?></span>
+                                            <td class="cell"><span class="truncate "><?php echo ucwords($row['branch']); ?></span>
+                                            <td class="cell"><span class="truncate text-success"><?php echo ucwords($row['hali']); ?></span>
                                             <td class="cell">
-                                            <a class="mx-2 btn-sm btn app-btn-secondary" href="#"><i class="mdi mdi-check-all text-success"></i></a>
+                                            <a class="mx-2 btn-sm btn app-btn-secondary" href="#"><i class="mdi mdi-telegram text-success"></i></a>
                                             </td>
                                         </tr>
                                     <?php } ?>
