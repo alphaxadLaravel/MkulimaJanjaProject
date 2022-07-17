@@ -30,19 +30,26 @@
                                         <th class="cell">Idadi</th>
                                         <th class="cell">Jumla</th>
                                         <th class="cell">Tawi</th>
-                                        <th class="cell">Tarehe</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php for ($i = 0; $i < 10; $i++) { ?>
+                                    <?php 
+                                        $user_id = $_SESSION['user_id'];
+
+                                        $sql = "SELECT * FROM malipo JOIN bidhaa ON malipo.bidhaa_id = bidhaa.id JOIN users ON malipo.user_id = users.id WHERE bidhaa.user_id='$user_id'";
+
+                                        // JOIN bidhaa ON bidhaa.user_id = users.id ORDER BY bidhaa.id Desc
+                                        $check = mysqli_query($conn, $sql);
+
+                                        while ($row = mysqli_fetch_assoc($check)) {
+                                    ?>
                                         <tr>
-                                            <td class="cell"><img src="../assets/images/product-1.jpg" class="img-fluid rounded" height="35px" width="35px" alt=""></td>
-                                            <td class="cell"><span class="truncate">Nyanya za Mchuzi</span></td>
-                                            <td class="cell"><span class="truncate">Philmon Mbuto Philmon</span></td>
-                                            <td class="cell"><span class="truncate ">20</span>
-                                            <td class="cell"><span class="truncate ">200,0000</span>
-                                            <td class="cell"><span class="truncate ">Airtel Money</span>
-                                            <td class="cell"><span class="truncate">29-04-2022</span>
+                                            <td class="cell"><img src="<?php echo $row['picha'] ?>" class="img-fluid rounded" height="35px" width="35px" alt=""></td>
+                                            <td class="cell"><span class="truncate"><?php echo ucwords($row['jina_bidhaa']); ?></span></td>
+                                            <td class="cell"><span class="truncate"><?php echo ucwords($row['jina_kamili']); ?></span></td>
+                                            <td class="cell"><span class="truncate "><?php echo $row['idadi'] ?></span>
+                                            <td class="cell"><span class="truncate ">Tsh <?php echo number_format($row['total']); ?>/=</span>
+                                            <td class="cell"><span class="truncate "><?php echo ucwords($row['branch']); ?></span>
                                             </td>
                                         </tr>
                                     <?php } ?>
@@ -53,7 +60,7 @@
                     </div>
                 </div>
 
-                <div class="d-flex justify-content-center">
+                <!-- <div class="d-flex justify-content-center">
                     <nav class="app-pagination my-3">
                         <ul class="pagination justify-content-center">
                             <li class="page-item disabled">
@@ -67,7 +74,7 @@
                             </li>
                         </ul>
                     </nav>
-                </div>
+                </div> -->
 
             </div>
         </div>

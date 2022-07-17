@@ -2,8 +2,8 @@
 <header class="app-header fixed-top">
 
     <?php include "../components/top_nav.php"; ?>
+    
     <!-- Include the side bar here -->
-
     <?php include "../components/sidebar.php"; ?>
 
 </header>
@@ -14,7 +14,7 @@
 
             <div class="row mb-4 align-items-center justify-content-between">
                 <div class="col-auto">
-                    <h1 class="app-page-title mb-0"><i class="mdi mdi-basket text-danger"></i> Bidhaa Zangu!</h1>
+                    <h1 class="app-page-title mb-0"><i class="mdi mdi-basket text-danger"></i> Nimenunua!</h1>
                 </div>
                 <div class="col-auto">
                     <div class="page-utilities">
@@ -36,24 +36,36 @@
                                     <tr>
                                         <th class="cell">Picha</th>
                                         <th class="cell">Bidhaa</th>
+                                        <th class="cell">Muuzaji</th>
                                         <th class="cell">Nimelipa</th>
                                         <th class="cell">idadi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php for ($i = 0; $i < 5; $i++) { ?>
+                                    <?php
+
+                                        $user_id = $_SESSION['user_id'];
+
+                                        $sql = "SELECT * FROM malipo JOIN bidhaa ON malipo.bidhaa_id = bidhaa.id WHERE malipo.user_id='$user_id'";
+
+                                        // JOIN bidhaa ON bidhaa.user_id = users.id ORDER BY bidhaa.id Desc
+                                        $check = mysqli_query($conn, $sql);
+
+                                        while ($row = mysqli_fetch_assoc($check)) {
+                                    
+                                    ?>
                                         <tr>
-                                            <td class="cell"><img src="../assets/images/product-1.jpg" class="img-fluid rounded" height="35px" width="35px" alt=""></td>
-                                            <td class="cell"><span class="truncate">Mbolea grade A+</span></td>
-                                            <td class="cell"><span class="truncate">Tsh 20, 000/=</span></td>
-                                            <td class="cell"><span class="truncate">30</span></td>
+                                            <td class="cell"><img src="<?php echo $row['picha'] ?>" class="img-fluid rounded" height="35px" width="35px" alt=""></td>
+                                            <td class="cell"><span class="truncate"><?php echo ucwords($row['jina_bidhaa']); ?></span></td>
+                                            <td class="cell"><span class="truncate"><?php echo ucwords($row['jina_muuzaji']); ?></span></td>
+                                            <td class="cell"><span class="truncate">Tsh <?php echo number_format($row['total']); ?>/=</span></td>
+                                            <td class="cell"><span class="truncate"><?php echo $row['idadi'] ?></span></td>
                                         </tr>
                                     <?php } ?>
 
                                 </tbody>
                             </table>
                         </div>
-                        <!--//table-responsive-->
 
                     </div>
                 </div>

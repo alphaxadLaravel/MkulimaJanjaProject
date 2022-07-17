@@ -57,15 +57,19 @@
                     $idadi = $row['added_quantity'];
                     $total = $row['total_cost'];
 
-                    // insert katika table ya malipo
-                    $sql ="INSERT INTO `malipo`(`user_id`, `mkoa`, `wilaya`, `branch`, `simu_mpokeaji`, `mahali`, `bidhaa_id`, `idadi`, `total`, `jina_muuzaji`) VALUES ('$user_id','$mkoa','$wilaya','$branch','$simu','$mahali','$bidhaa','$idadi','$total','Alpha Jozee')";
-                    mysqli_query($conn, $sql);
-
                     // Pata Taarifa za Bidhaa, Hasa idadi iliyopo
-                    $available = "SELECT * FROM bidhaa WHERE id ='$bidhaa'";
+                    $available = "SELECT * FROM bidhaa JOIN users ON bidhaa.user_id = users.id WHERE bidhaa.id ='$bidhaa'";
                     $kipo = mysqli_query($conn, $available);
                     $imepatikana = mysqli_fetch_assoc($kipo);
+                    // Chukua jina la muuzaji
+                    $muuzaji = $imepatikana['jina_kamili'];
+                    // Chukua kiasi kilichopo
                     $kilichopo = $imepatikana['quantity'];
+
+                    // insert katika table ya malipo
+                    $sql ="INSERT INTO `malipo`(`user_id`, `mkoa`, `wilaya`, `branch`, `simu_mpokeaji`, `mahali`, `bidhaa_id`, `idadi`, `total`, `jina_muuzaji`) VALUES ('$user_id','$mkoa','$wilaya','$branch','$simu','$mahali','$bidhaa','$idadi','$total','$muuzaji')";
+                    mysqli_query($conn, $sql);
+                
 
                     // Punguza kiasi cha bidhaa kwa kila bidhaa iliyonunuliwa
                     $new_quantity = $kilichopo - $idadi;
@@ -91,6 +95,9 @@
                 // Ondoa bidhaa alizo lipa kwenye cart
                 $sql = "DELETE FROM cart WHERE user_id ='$user_id'";
                 mysqli_query($conn, $sql);
+
+                echo "Product Shopped successfully...";
+                exit(header("Location: ../dashboard/payed.php"));
 
             }else{
                 echo "Taarifa za Account hii hazipo";

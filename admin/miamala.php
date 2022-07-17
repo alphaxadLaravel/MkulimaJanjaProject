@@ -52,7 +52,7 @@
                                 <tbody>
                                     <?php
 
-                                        $sql = "SELECT * FROM malipo JOIN users ON malipo.user_id = users.id JOIN bidhaa ON malipo.bidhaa_id = bidhaa.id";
+                                        $sql = "SELECT *, malipo.id AS lipa FROM malipo JOIN users ON malipo.user_id = users.id JOIN bidhaa ON malipo.bidhaa_id = bidhaa.id";
                                         // JOIN bidhaa ON bidhaa.user_id = users.id ORDER BY bidhaa.id Desc
                                         $check = mysqli_query($conn, $sql);
 
@@ -66,10 +66,20 @@
                                             <td class="cell"><span class="truncate "><?php echo ucwords($row['total']); ?></span>
                                             <td class="cell"><span class="truncate"><?php echo ucwords($row['idadi']); ?></span>
                                             <td class="cell"><span class="truncate "><?php echo ucwords($row['branch']); ?></span>
-                                            <td class="cell"><span class="truncate text-success"><?php echo ucwords($row['hali']); ?></span>
                                             <td class="cell">
-                                            <a class="mx-2 btn-sm btn app-btn-secondary" href="#"><i class="mdi mdi-telegram text-success"></i></a>
-                                            </td>
+                                                <?php if($row['hali'] != "imethibitishwa"){?>
+                                                    <span class="truncate text-danger"><?php echo ucwords($row['hali']); ?>
+                                                <?php }else { ?>
+                                                <span class="truncate text-success"><?php echo ucwords($row['hali']); ?>
+                                                <?php }?>
+                                            </span>
+                                            <td class="cell">
+                                                <?php if($row['hali'] != "imethibitishwa"){?>
+                                            <a class="mx-2 btn-sm btn app-btn-secondary" href="../logics/gawaMiamala.php?id=<?php echo $row['lipa']; ?>"><i class="mdi mdi-telegram text-success"></i></a>
+                                            <?php }else { ?>
+                                                <i class="mdi mdi-check-all text-success"></i>
+                                            <?php }?>
+                                        </td>
                                         </tr>
                                     <?php } ?>
                                 </tbody>
