@@ -21,7 +21,7 @@
             </div>
 
             <!-- steps ziko hapa -->
-            <form action="" method="post">
+            <form action="../logics/checkoutServer.php" method="post">
                 <div class="row mb-4 align-items-center justify-content-between">
 
                     <div class="col-md-6 mb-2">
@@ -116,8 +116,6 @@
                                             <small for="setting-input-1" class="form-label">Mkoa Uliopo<span class="text-danger">*</span></small>
                                             <select class="form-select " id="mkoa" required="" name="mkoa">
                                                 <option value="">Chagua Mkoa uliopo...</option>
-                                                <option value="mwanza">Mwanza</option>
-                                                <option value="Dodoma">Dodoma</option>
                                                 <option value="Dar">Dar</option>
                                             </select>
                                         </div>
@@ -125,11 +123,13 @@
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <small for="setting-input-1" class="form-label">Wilaya Uliyopo<span class="text-danger">*</span></small>
-                                            <select class="form-select " required="">
+                                            <select class="form-select " name="wilaya" required="">
                                                 <option value="">Chagua wilaya uliyopo...</option>
                                                 <option value="mwanza">Ilala</option>
-                                                <option value="mwanza">Temeke</option>
-                                                <option value="mwanza">Kinondoni</option>
+                                                <option value="temeke">Temeke</option>
+                                                <option value="kinondoni">Kinondoni</option>
+                                                <option value="kigamboni">Kigamboni</option>
+                                                <option value="Ubungo">Ubungo</option>
                                             </select>
                                         </div>
                                     </div>
@@ -138,13 +138,13 @@
                                     <div class="col-md-6">
                                         <div class="mb-2">
                                             <small for="setting-input-1" class="form-label">Mahali pakupolea <span class="text-danger">*</span></small>
-                                            <input type="text" class="form-control" id="mahali" value="" placeholder="pakupokelea mzigo" required="">
+                                            <input type="text" class="form-control" name="mahali" value="" placeholder="pakupokelea mzigo" required="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="mb-2">
                                             <small for="setting-input-1" class="form-label">Simu ya Mpokeaji <span class="text-danger">*</span></small>
-                                            <input type="number" class="form-control" id="setting-input-1" value="" placeholder="07..." required="">
+                                            <input type="number" class="form-control" id="setting-input-1" name="simu" value="" placeholder="07..." required="">
                                         </div>
                                     </div>
                                 </div>
@@ -199,7 +199,7 @@
                                                 <div class="col text-end">
                                                     <div class="form-check">
                                                         <label class="form-check-label">
-                                                            <input type="radio" class="form-check-input" style="cursor: pointer;" name="branch" required="" value="T Pesa">
+                                                            <input type="radio" class="form-check-input" style="cursor: pointer;" name="branch" required="" value="T-Pesa">
                                                         </label>
                                                     </div>
                                                 </div>
@@ -270,7 +270,18 @@
                                         <div class="row justify-content-between align-items-center">
                                             <div class="col-auto">
                                                 <div class="item-label"><strong>Namba ya Malipo</strong></div>
-                                                <div class="item-data"><?php echo $_SESSION['simu']; ?> </div>
+                                                <div class="item-data">
+                                                    <?php
+                                                        $user_id = $_SESSION['user_id'];
+
+                                                        $sql = "SELECT * FROM users WHERE id ='$user_id'";
+                                                        $result = mysqli_query($conn, $sql);
+                                                        $row = mysqli_fetch_assoc($result);
+
+                                                    ?>
+                                                    <?php echo $row['simu']; ?>
+                                                    <?php ?>
+                                                </div>
                                             </div>
                                             <div class="col text-end">
                                                 <a class="btn-sm btn-outline-success" href="profile.php"><i class="mdi mdi-pencil"></i></a>
@@ -280,11 +291,11 @@
                                     <div class="item">
                                         <div class="mb-2">
                                             <small for="setting-input-1" class="form-label">Ingiza PIN yako <span class="text-danger">*</span></small>
-                                            <input type="number" class="form-control" id="setting-input-1" value="" placeholder="...." required="">
+                                            <input type="number" class="form-control" id="setting-input-1" name="pin" value="" placeholder="...." required="">
                                         </div>
                                     </div>
                                     <div class="item py-2">
-                                        <button type="submit" class="btn btn-success w-100 text-white"> Lipia </button>
+                                        <button type="submit" name="checkout" class="btn btn-success w-100 text-white"> Lipia </button>
                                     </div>
 
                                 </div>

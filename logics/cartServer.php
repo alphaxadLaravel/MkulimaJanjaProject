@@ -18,9 +18,7 @@
         $result = mysqli_query($conn, $query);
         $answer = mysqli_fetch_assoc($result);
 
-        echo $answer['bei'];
         $total_cost = $quantity  * $answer['bei'];
-
 
         // kagua kama bidhaa hyo ipokatika cart..kama ipo update na sio kuweka tena
         $sql_check = "SELECT * FROM cart WHERE user_id ='$user_id' AND bidhaa_id='$bidhaa'";
@@ -33,17 +31,38 @@
             $new_quantity = $data['added_quantity'] + $quantity;
             $total_cost = $quantity  * $answer['bei'];
             $new_cost = $data['total_cost'] +  $total_cost;
-            $sql_check = "UPDATE `cart` SET `added_quantity`='$new_quantity', `total_cost`='$new_cost' WHERE bidhaa_id='$bidhaa' AND user_id='$user_id'";
-            $check = mysqli_query($conn, $sql_check);
 
-            echo "updated Quantity...";
-            exit(header("Location: ../dashboard/cart.php"));
+            // kagua kiwango kilichopo na alicho weka
+            $kagua = "SELECT * FROM bidhaa WHERE id='$bidhaa'";
+            $result = mysqli_query($conn, $kagua);
+            $jibu = mysqli_fetch_assoc($result);
+            $kiasi = $jibu['quantity'];
 
+            if($new_quantity <= $kiasi){
+                $sql_check = "UPDATE `cart` SET `added_quantity`='$new_quantity', `total_cost`='$new_cost' WHERE bidhaa_id='$bidhaa' AND user_id='$user_id'";
+                $check = mysqli_query($conn, $sql_check);
+    
+                echo "updated Quantity...";
+                exit(header("Location: ../dashboard/cart.php"));
+            }else{
+                echo "Kiasi kilichopo ni kidogo kuliko unachotaka!";
+            }
         }else{
-            $sql = "INSERT INTO `cart`(`user_id`, `bidhaa_id`, `added_quantity`, `total_cost`) VALUES ('$user_id','$bidhaa','$quantity','$total_cost')";
-            mysqli_query($conn, $sql);
-            echo "added successfully...";
-            exit(header("Location: ../dashboard/cart.php"));
+
+            // kagua kiwango kilichopo na alicho weka
+            $kagua = "SELECT * FROM bidhaa WHERE id='$bidhaa'";
+            $result = mysqli_query($conn, $kagua);
+            $jibu = mysqli_fetch_assoc($result);
+            $kiasi = $jibu['quantity'];
+
+            if($quantity <= $kiasi){
+                $sql = "INSERT INTO `cart`(`user_id`, `bidhaa_id`, `added_quantity`, `total_cost`) VALUES ('$user_id','$bidhaa','$quantity','$total_cost')";
+                mysqli_query($conn, $sql);
+                echo "added successfully...";
+                exit(header("Location: ../dashboard/cart.php"));
+            }else{
+                echo "Kiasi kilichopo ni kidogo kuliko unachotaka!";
+            }
 
         }
 

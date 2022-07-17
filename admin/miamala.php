@@ -41,21 +41,33 @@
                                     <tr>
                                         <th class="cell">Kutoka kwa</th>
                                         <th class="cell">Kwenda Kwa</th>
-                                        <th class="cell">Dhumuni</th>
+                                        <th class="cell">Bidhaa</th>
                                         <th class="cell">Kiasi</th>
+                                        <th class="cell">Idadi</th>
                                         <th class="cell">Tawi</th>
-                                        <th class="cell">Tarehe</th>
+                                        <th class="cell">Thibitisha</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php for ($i = 0; $i < 10; $i++) { ?>
+                                    <?php
+
+                                        $sql = "SELECT * FROM malipo JOIN users ON malipo.user_id = users.id";
+                                        // JOIN bidhaa ON bidhaa.user_id = users.id ORDER BY bidhaa.id Desc
+                                        $check = mysqli_query($conn, $sql);
+
+                                        while ($row = mysqli_fetch_assoc($check)) {
+
+                                
+                                    ?>
                                         <tr>
-                                            <td class="cell"><span class="truncate">Alpha Jozee Kakulu</span></td>
+                                            <td class="cell"><span class="truncate"><?php echo $row['jina_kamili']; ?></span></td>
                                             <td class="cell"><span class="truncate">Philmon Mbuto Philmon</span></td>
                                             <td class="cell"><span class="truncate text-success">Mazao</span>
                                             <td class="cell"><span class="truncate ">200,0000</span>
                                             <td class="cell"><span class="truncate ">Airtel Money</span>
-                                            <td class="cell"><span class="truncate">29-04-2022</span>
+                                            <td class="cell"><span class="truncate">adsadsad</span>
+                                            <td class="cell">
+                                            <a class="mx-2 btn-sm btn app-btn-secondary" href="#"><i class="mdi mdi-check-all text-success"></i></a>
                                             </td>
                                         </tr>
                                     <?php } ?>
@@ -65,23 +77,6 @@
 
                     </div>
                 </div>
-
-                <div class="d-flex justify-content-center">
-                    <nav class="app-pagination my-3">
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item disabled">
-                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i class="mdi mdi-chevron-double-left"></i></a>
-                            </li>
-                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#"><i class="mdi mdi-chevron-double-right"></i></a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-
             </div>
         </div>
 

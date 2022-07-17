@@ -45,20 +45,13 @@
 							<span class="nav-link-text">Miamala</span>
 						</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link <?= (basename($_SERVER['REQUEST_URI']) == 'elimu.php') ? 'active':''; ?>" href="../admin/elimu.php">
-							<span class="nav-icon">
-								<i class="mdi mdi-book-open-page-variant"></i>
-							</span>
-							<span class="nav-link-text">Elimu</span>
-						</a>
-					</li>
+					
 					<li class="nav-item mb-3">
 						<a class="nav-link <?= (basename($_SERVER['REQUEST_URI']) == 'ongeza_elimu.php') ? 'active':''; ?>" href="../admin/ongeza_elimu.php">
 							<span class="nav-icon">
-								<i class="mdi mdi-book-open-page-variant"></i>
+								<i class="mdi mdi-account-multiple"></i>
 							</span>
-							<span class="nav-link-text">Ongeza Elimu</span>
+							<span class="nav-link-text">Bwana Shamba</span>
 						</a>
 					</li>
 				<?php } ?>
